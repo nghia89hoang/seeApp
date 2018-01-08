@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>use cam?</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>UILaunchStoryboardName</key>
@@ -24,7 +26,7 @@
 			<key>UIPrerenderedIcon</key>
 			<true/>
 		</dict>
-	</dict>	
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>org.libcinder.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
