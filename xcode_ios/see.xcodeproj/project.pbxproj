@@ -42,6 +42,15 @@
 		6DB748C373E44AF8B43A37E0 /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4F169613FE041AEA8326B9A /* b2Math.cpp */; };
 		6E883D9CC9FB4581B6ED9D51 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF9A604EE81E4FA2B1A1B836 /* b2DynamicTree.cpp */; };
 		703278CAFD424D73BC99E364 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A61335F5C404D02BC4537D0 /* b2BroadPhase.cpp */; };
+		73474B91200323BC008228DB /* FilterMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B8F200323BC008228DB /* FilterMgr.cpp */; };
+		73474B942003248F008228DB /* Filterbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B922003248F008228DB /* Filterbase.cpp */; };
+		73474B98200372A1008228DB /* GrayPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B96200372A1008228DB /* GrayPass.cpp */; };
+		735723D320045C3A00ACFB5A /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 735723D120045C3A00ACFB5A /* MainViewController.mm */; };
+		735723D420045C3A00ACFB5A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735723D220045C3A00ACFB5A /* MainViewController.xib */; };
+		735723D62004694D00ACFB5A /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 735723D52004694D00ACFB5A /* libc++.1.tbd */; };
+		735723D82004696A00ACFB5A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 735723D72004696A00ACFB5A /* libc++.tbd */; };
+		735723DA2004697F00ACFB5A /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 735723D92004697F00ACFB5A /* libc++abi.tbd */; };
+		735723DC200469F600ACFB5A /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 735723DB200469F600ACFB5A /* libstdc++.6.0.9.tbd */; };
 		739250082001BEB00046B23B /* _DraggableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73924FE82001BD560046B23B /* _DraggableView.cpp */; };
 		739250092001BEB00046B23B /* _Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73924FEA2001BD560046B23B /* _Button.cpp */; };
 		7392500A2001BEB00046B23B /* _ButtonSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73924FEC2001BD560046B23B /* _ButtonSet.cpp */; };
@@ -76,7 +85,7 @@
 		C727C02E121B400300192073 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C727C02D121B400300192073 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C7FB19D6124BC0D70045AFD2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FB19D5124BC0D70045AFD2 /* AudioToolbox.framework */; };
 		CAD9356DE25A48349DAF95BD /* b2Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89348277DC134F64B1FBB27E /* b2Timer.cpp */; };
-		CC44394DE9FC4E15BDFE01E3 /* seeApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CD1F4E7D7E460291A56F73 /* seeApp.cpp */; };
+		CC44394DE9FC4E15BDFE01E3 /* seeApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42CD1F4E7D7E460291A56F73 /* seeApp.mm */; };
 		CD1A4D4DAAF24EDBB34B4A3B /* Osc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC55F37AD4540DAA27C6BB7 /* Osc.cpp */; };
 		CFE469CB8DCD4D319B854D40 /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27F30FA1B8CF4D3B976D97D7 /* b2Body.cpp */; };
 		D32AD61B39AF4177A025B413 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC51075872B447CE9D35814E /* b2WheelJoint.cpp */; };
@@ -127,7 +136,7 @@
 		3D242B6ED2B14D059CBE4F4E /* b2World.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2World.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/b2World.h; sourceTree = "<group>"; };
 		3D6E7A2F817346ECA3B01862 /* b2BroadPhase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2BroadPhase.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/b2BroadPhase.h; sourceTree = "<group>"; };
 		3DD6C9A9D7154B2FB5E48468 /* b2Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2Shape.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/Shapes/b2Shape.h; sourceTree = "<group>"; };
-		42CD1F4E7D7E460291A56F73 /* seeApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = seeApp.cpp; path = ../src/seeApp.cpp; sourceTree = "<group>"; };
+		42CD1F4E7D7E460291A56F73 /* seeApp.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = seeApp.mm; path = ../src/seeApp.mm; sourceTree = "<group>"; };
 		450B092B52BA48D39FC25EF1 /* b2ContactSolver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2ContactSolver.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Contacts/b2ContactSolver.cpp; sourceTree = "<group>"; };
 		48EC1C9922A243379A2A4B7D /* b2Joint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2Joint.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Joints/b2Joint.cpp; sourceTree = "<group>"; };
 		4D20B96C600946F78DEA2EE1 /* b2ChainAndPolygonContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2ChainAndPolygonContact.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h; sourceTree = "<group>"; };
@@ -150,6 +159,20 @@
 		6F62B98524394624B3AE30FE /* b2Island.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2Island.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/b2Island.cpp; sourceTree = "<group>"; };
 		70F4CF64DD324AD8BC5FDAE1 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2CollideCircle.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/b2CollideCircle.cpp; sourceTree = "<group>"; };
 		727937523A724D77B2355950 /* b2CircleShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2CircleShape.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/Shapes/b2CircleShape.h; sourceTree = "<group>"; };
+		73474B8F200323BC008228DB /* FilterMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FilterMgr.cpp; path = ../src/FilterMgr.cpp; sourceTree = "<group>"; };
+		73474B90200323BC008228DB /* FilterMgr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FilterMgr.hpp; path = ../src/FilterMgr.hpp; sourceTree = "<group>"; };
+		73474B922003248F008228DB /* Filterbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Filterbase.cpp; path = ../src/Filterbase.cpp; sourceTree = "<group>"; };
+		73474B932003248F008228DB /* Filterbase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Filterbase.hpp; path = ../src/Filterbase.hpp; sourceTree = "<group>"; };
+		73474B96200372A1008228DB /* GrayPass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GrayPass.cpp; path = ../src/Filter/GrayPass.cpp; sourceTree = "<group>"; };
+		73474B97200372A1008228DB /* GrayPass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = GrayPass.hpp; path = ../src/Filter/GrayPass.hpp; sourceTree = "<group>"; };
+		735723D020045C3A00ACFB5A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../src/MainViewController.h; sourceTree = "<group>"; };
+		735723D120045C3A00ACFB5A /* MainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MainViewController.mm; path = ../src/MainViewController.mm; sourceTree = "<group>"; };
+		735723D220045C3A00ACFB5A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = ../src/MainViewController.xib; sourceTree = "<group>"; };
+		735723D52004694D00ACFB5A /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		735723D72004696A00ACFB5A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		735723D92004697F00ACFB5A /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		735723DB200469F600ACFB5A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		735723DD20046B3200ACFB5A /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		73924FE82001BD560046B23B /* _DraggableView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _DraggableView.cpp; sourceTree = "<group>"; };
 		73924FEA2001BD560046B23B /* _Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _Button.cpp; sourceTree = "<group>"; };
 		73924FEB2001BD560046B23B /* ScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
@@ -261,6 +284,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735723DC200469F600ACFB5A /* libstdc++.6.0.9.tbd in Frameworks */,
+				735723DA2004697F00ACFB5A /* libc++abi.tbd in Frameworks */,
+				735723D82004696A00ACFB5A /* libc++.tbd in Frameworks */,
+				735723D62004694D00ACFB5A /* libc++.1.tbd in Frameworks */,
 				C725E001121DAC8F00FA186B /* AVFoundation.framework in Frameworks */,
 				C725DFFE121DAC7F00FA186B /* CoreMedia.framework in Frameworks */,
 				C725E001121DAC8FFFFA18FF /* ImageIO.framework in Frameworks */,
@@ -304,6 +331,11 @@
 		00692BD214FF149000D0A05E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				735723DD20046B3200ACFB5A /* libc.tbd */,
+				735723DB200469F600ACFB5A /* libstdc++.6.0.9.tbd */,
+				735723D92004697F00ACFB5A /* libc++abi.tbd */,
+				735723D72004696A00ACFB5A /* libc++.tbd */,
+				735723D52004694D00ACFB5A /* libc++.1.tbd */,
 				C7FB19D5124BC0D70045AFD2 /* AudioToolbox.framework */,
 				00A66A351965AC8800B17EB3 /* Accelerate.framework */,
 				C727C02B121B400300192073 /* CoreMedia.framework */,
@@ -325,13 +357,19 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				735723CC20045BAA00ACFB5A /* Native */,
+				73474B9520036FFD008228DB /* Filter */,
 				739250162001C17A0046B23B /* CaptureView.cpp */,
 				7392501B2001C17B0046B23B /* CaptureView.h */,
 				739250172001C17A0046B23B /* TestView.cpp */,
 				739250192001C17A0046B23B /* TestView.h */,
 				739250182001C17A0046B23B /* ViewController.cpp */,
 				7392501A2001C17B0046B23B /* ViewController.hpp */,
-				42CD1F4E7D7E460291A56F73 /* seeApp.cpp */,
+				42CD1F4E7D7E460291A56F73 /* seeApp.mm */,
+				73474B8F200323BC008228DB /* FilterMgr.cpp */,
+				73474B90200323BC008228DB /* FilterMgr.hpp */,
+				73474B922003248F008228DB /* Filterbase.cpp */,
+				73474B932003248F008228DB /* Filterbase.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -472,6 +510,25 @@
 				88D7953B05894B1497F0FBC3 /* src */,
 			);
 			name = OSC;
+			sourceTree = "<group>";
+		};
+		73474B9520036FFD008228DB /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				73474B96200372A1008228DB /* GrayPass.cpp */,
+				73474B97200372A1008228DB /* GrayPass.hpp */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		735723CC20045BAA00ACFB5A /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				735723D020045C3A00ACFB5A /* MainViewController.h */,
+				735723D120045C3A00ACFB5A /* MainViewController.mm */,
+				735723D220045C3A00ACFB5A /* MainViewController.xib */,
+			);
+			name = Native;
 			sourceTree = "<group>";
 		};
 		73924FE72001BD560046B23B /* poScene */ = {
@@ -719,6 +776,7 @@
 			files = (
 				00748058165D41390024B57A /* assets in Resources */,
 				21C947970EF84AE4A55E13CC /* CinderApp_ios.png in Resources */,
+				735723D420045C3A00ACFB5A /* MainViewController.xib in Resources */,
 				28AE6C60657748AAABAFF43D /* Images.xcassets in Resources */,
 				BD8E28729DF84282B2139838 /* LaunchScreen.xib in Resources */,
 			);
@@ -738,16 +796,18 @@
 				739250092001BEB00046B23B /* _Button.cpp in Sources */,
 				7392500A2001BEB00046B23B /* _ButtonSet.cpp in Sources */,
 				7392500B2001BEB00046B23B /* _ScrollView.cpp in Sources */,
+				735723D320045C3A00ACFB5A /* MainViewController.mm in Sources */,
 				7392500C2001BEB00046B23B /* _ImageView.cpp in Sources */,
 				7392500D2001BEB00046B23B /* _View.cpp in Sources */,
 				7392500E2001BEB00046B23B /* _ShapeView.cpp in Sources */,
 				7392500F2001BEB00046B23B /* _MatrixSet.cpp in Sources */,
+				73474B942003248F008228DB /* Filterbase.cpp in Sources */,
 				739250102001BEB00046B23B /* _DragAndDrop.cpp in Sources */,
 				739250112001BEB00046B23B /* _Events.cpp in Sources */,
 				7392501E2001C17B0046B23B /* ViewController.cpp in Sources */,
 				739250122001BEB00046B23B /* _Scene.cpp in Sources */,
 				739250132001BEB00046B23B /* _EventCenter.cpp in Sources */,
-				CC44394DE9FC4E15BDFE01E3 /* seeApp.cpp in Sources */,
+				CC44394DE9FC4E15BDFE01E3 /* seeApp.mm in Sources */,
 				703278CAFD424D73BC99E364 /* b2BroadPhase.cpp in Sources */,
 				7392501D2001C17B0046B23B /* TestView.cpp in Sources */,
 				EB46605413E54A948774C0C0 /* b2CollideCircle.cpp in Sources */,
@@ -780,6 +840,7 @@
 				657E0DD56F0141C2863A06C0 /* b2ContactSolver.cpp in Sources */,
 				779B4B454EBE48B5B6E4BD60 /* b2EdgeAndCircleContact.cpp in Sources */,
 				06D3FFC12BFE46DF954A2DA3 /* b2EdgeAndPolygonContact.cpp in Sources */,
+				73474B98200372A1008228DB /* GrayPass.cpp in Sources */,
 				ECA0BFDCFD584769A5333ED2 /* b2PolygonAndCircleContact.cpp in Sources */,
 				7392501C2001C17B0046B23B /* CaptureView.cpp in Sources */,
 				036A5233AFDC4691B596B541 /* b2PolygonContact.cpp in Sources */,
@@ -797,6 +858,7 @@
 				DE666B6C57274984921CC35D /* b2Rope.cpp in Sources */,
 				EBCA6BA811154D9B8A801231 /* MotionManager.cpp in Sources */,
 				39D0F47C20B5468A8C3DA28D /* MotionImplCoreMotion.mm in Sources */,
+				73474B91200323BC008228DB /* FilterMgr.cpp in Sources */,
 				CD1A4D4DAAF24EDBB34B4A3B /* Osc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,10 +941,13 @@
 		00692BF614FF149000D0A05E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZCXT8D4NP2;
 				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = see_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -896,6 +961,8 @@
 					"../blocks/Cinder-poScene/src",
 				);
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/ios/$(CONFIGURATION)/libcinder.a\"",
 					"-lz",
@@ -916,10 +983,13 @@
 		00692BF714FF149000D0A05E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZCXT8D4NP2;
 				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = see_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -933,6 +1003,8 @@
 					"../blocks/Cinder-poScene/src",
 				);
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/ios/$(CONFIGURATION)/libcinder.a\"",
 					"-lz",

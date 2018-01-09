@@ -4,11 +4,14 @@
 #include "cinder/Log.h"
 #include "ViewController.hpp"
 #include "poScene/Scene.h"
+#include "MainViewController.h"
 
 using namespace ci;
 using namespace ci::app;
 using namespace std;
 using namespace po::scene;
+
+MainViewController *sMainViewController = [[MainViewController alloc] init];
 
 class seeApp : public App {
   public:
@@ -17,6 +20,8 @@ class seeApp : public App {
     void keyDown(KeyEvent event) override;
 	void update() override;
 	void draw() override;
+    
+    static void prepareSettings(Settings *setting);
 private:
 #pragma mark FUNC
     void printDevice();
@@ -29,11 +34,16 @@ private:
     gl::TextureRef mMaintex;
 };
 
+
 void seeApp::setup()
 {
+#if 1
+    [sMainViewController addCinderViewToFront];
+#else
+    [sMainViewController addCinderViewAsBarButton];
+#endif
     mVc = see::ViewController::create();
     mScene = Scene::create(mVc);
-    setFrameRate(30.0f);
 }
 
 void seeApp::update()
@@ -53,4 +63,11 @@ void seeApp::mouseDown( ci::app::MouseEvent event)
 void seeApp::keyDown(cinder::app::KeyEvent event) {
     
 }
-CINDER_APP( seeApp, RendererGl )
+
+void seeApp::prepareSettings(cinder::app::AppCocoaTouch::Settings *settings) {
+    settings->prepareWindow(Window::Format().rootViewController(sMainViewController));
+    settings->setFrameRate(30.0f);
+}
+
+
+CINDER_APP( seeApp, RendererGl, seeApp::prepareSettings )

@@ -7,9 +7,8 @@
 
 #ifndef CaptureView_hpp
 #define CaptureView_hpp
-#include "cinder/gl/gl.h"
-#include "cinder/Capture.h"
 #include "poScene/View.h"
+#include "GrayPass.hpp"
 #include <stdio.h>
 
 using namespace cinder;
@@ -29,17 +28,17 @@ namespace see {
         virtual void draw() override;
         virtual View& removeFromSuperview() override;
         
-        void printDeviceInfo();
+        void initCapture(int width, int height, bool frontDevice = true);
     protected:
-        CaptureView();
-        void initGrayProg();
+        CaptureView();        
         void initSobelProg();
     private:
         int mWidth, mHeight;
+        GrayPassRef mGrayPass;
+        FilterbaseRef mFilter;
         CaptureRef mCapture;
         gl::FboRef mFbo;
-        gl::GlslProgRef mGrayProg;
-        gl::GlslProgRef mSobelProg;
+        gl::GlslProgRef mProg;
         gl::TextureRef mTex0;
         gl::TextureRef mTex1;
         gl::TextureRef mCaptureTex;

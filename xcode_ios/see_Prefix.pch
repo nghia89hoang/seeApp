@@ -4,9 +4,14 @@
 	#include "cinder/app/App.h"
 	
 	#include "cinder/gl/gl.h"
-	
+
+    #include "cinder/Capture.h"
 	#include "cinder/CinderMath.h"
 	#include "cinder/Matrix.h"
 	#include "cinder/Vector.h"
 	#include "cinder/Quaternion.h"
+#endif
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #endif

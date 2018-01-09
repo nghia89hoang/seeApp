@@ -14,8 +14,7 @@ using namespace cinder::app;
 using namespace std;
 namespace see {
     
-    void Filterbase::setup() {
-        
+    void Filterbase::setup() {    
     }
     void Filterbase::draw() {
         for(RdPass* pass : mRenderQueue) {
@@ -25,10 +24,23 @@ namespace see {
             pass->draw();
         }
     }
-    void Filterbase::buildRenderList(RdPassRef finalPass) {
-        finalPass->buildRenderQueue(mRenderQueue);
+    void Filterbase::update() {
+        for(RdPass* pass : mRenderQueue) {
+            if(pass == nullptr) {
+                continue;
+            }
+            pass->update();
+        }
     }
-    
+    void Filterbase::buildRenderList() {
+        mFinalPass->buildRenderQueue(mRenderQueue);
+    }
+    void Filterbase::setFinalPass(RdPassRef finalPass) {
+        mFinalPass = finalPass;
+        buildRenderList();
+    }
+    Filterbase::Filterbase() {
+    }
     Filterbase::~Filterbase() {
         mRenderQueue.clear();
     }
@@ -46,7 +58,24 @@ namespace see {
         ref->setup();
         return ref;
     }
-    void RdPass::setup() {        
+    void RdPass::setup() {
+        createGlslProg("filter/basic.vert", "filter/copy.frag");
+    }
+    void RdPass::update() {
+        
+    }
+//    RdPass* RdPass::createBatch(const gl::VboMeshRef &vboMesh, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping) {
+//        createGlslProg(vertPath, fragPath);
+//        mBatch = gl::Batch::create(vboMesh, mProg, attributeMapping);
+//        return this;
+//    }
+//    RdPass* RdPass::createBatch(const geom::Source &source, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping) {
+//        createGlslProg(vertPath, fragPath);
+//        mBatch = gl::Batch::create(source, mProg, attributeMapping);
+//        return this;
+//    }
+    void RdPass::setBatch(gl::BatchRef batchRef) {
+        mBatch = batchRef;
     }
     RdPass* RdPass::createGlslProg(const fs::path &vertPath, const fs::path &fragPath) {
         mProg = gl::GlslProg::create(gl::GlslProg::Format()
@@ -55,7 +84,7 @@ namespace see {
         return this;
     }
     RdPass* RdPass::setInputTexture(int slot, gl::TextureRef tex) {
-        if(mInputTexture[slot] )
+//        if(mInputTexture[slot] )
         mInputTexture[slot] = tex;
         return this;
     }
@@ -84,13 +113,22 @@ namespace see {
         }
         gl::ScopedGlslProg grayProg(mProg);
         if(mFboTarget != nullptr) {
-            gl::ScopedFramebuffer scopedFbo(mFboTarget);
-            gl::draw(mFboTarget->getColorTexture());
-            
-        } else {
-//            gl::drawSolidRect(r);
+            mFboTarget->bindFramebuffer();
         }
-        geom::Rect r;
+        
+        if(mBatch) {
+            mBatch->draw();
+        } else {
+            if(mFboTarget) {
+                gl::drawSolidRect(mFboTarget->getBounds());
+            } else {
+                gl::drawSolidRect(mInputTexture[0]->getBounds());
+            }
+        }
+        
+        if(mFboTarget != nullptr) {
+            mFboTarget->unbindFramebuffer();
+        }
         for(map<int, gl::TextureRef>::iterator it = mInputTexture.begin();
             it != mInputTexture.end(); ++it) {
             it->second->unbind();

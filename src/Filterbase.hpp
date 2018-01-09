@@ -27,16 +27,19 @@ namespace see {
         virtual ~Filterbase();
         static FilterbaseRef create() {
             FilterbaseRef ref = FilterbaseRef(new Filterbase());
-            ref->setup();
+            ref->setup();            
             return ref;
         }
+        void setFinalPass(RdPassRef finalPass);
+        
         virtual void setup();
         virtual void update();
         virtual void draw();
-        void buildRenderList(RdPassRef finalPass);
+        void buildRenderList();
+        
     protected:
         Filterbase();
-    private:
+        RdPassRef mFinalPass;
         list<RdPass*> mRenderQueue;
     };
     
@@ -52,16 +55,19 @@ namespace see {
         }
         
         virtual void setup();
-        void draw();
+        virtual void draw();
         virtual void update();
-        
+        void setBatch(gl::BatchRef batchRef);
+//        RdPass* createBatch(const gl::VboMeshRef &vboMesh, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping = gl::Batch::AttributeMapping());
+//        RdPass* createBatch(const geom::Source &source, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping = gl::Batch::AttributeMapping());
         RdPass* createGlslProg(const fs::path &vertPath, const fs::path &fragPath);
         RdPass* setInputTexture(int slot, gl::TextureRef tex);
         RdPass* setFbo(gl::FboRef fbo);
         void chainNext(RdPassRef nextPass, int textureUnit = 0, GLenum attachment = GL_COLOR_ATTACHMENT0);
         void buildRenderQueue(list<RdPass*> &renderQueue);
     protected:
-        // TODO: Handle VBO, Mesh source, Batching
+        // TODO: Handle VBO, Batching
+        gl::BatchRef mBatch;
         RdPass();
         list<RdPass*> mPrevRdPass;
         gl::GlslProgRef mProg;

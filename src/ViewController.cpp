@@ -27,8 +27,11 @@ namespace see {
         
 //        mTestView = TestView::create();
 //        mRoot->addSubview(mTestView);
-        
-        mCaptureView = CaptureView::create(app::getWindowWidth(), app::getWindowHeight());
+        Area a(ci::app::getWindowBounds());
+        ivec2 s(ci::app::getWindowSize());
+        float scale = ci::app::getWindowContentScale();
+        ivec2 screenSize(float(s.x) * scale, float(s.y) * scale);
+        mCaptureView = CaptureView::create(screenSize.x, screenSize.y);
         mRoot->addSubview(mCaptureView);
         
     }
