@@ -42,9 +42,10 @@
 		6DB748C373E44AF8B43A37E0 /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4F169613FE041AEA8326B9A /* b2Math.cpp */; };
 		6E883D9CC9FB4581B6ED9D51 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF9A604EE81E4FA2B1A1B836 /* b2DynamicTree.cpp */; };
 		703278CAFD424D73BC99E364 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A61335F5C404D02BC4537D0 /* b2BroadPhase.cpp */; };
+		7336A71A2004BE2B00356F95 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7336A7182004BE2B00356F95 /* Particle.cpp */; };
 		73474B91200323BC008228DB /* FilterMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B8F200323BC008228DB /* FilterMgr.cpp */; };
-		73474B942003248F008228DB /* Filterbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B922003248F008228DB /* Filterbase.cpp */; };
-		73474B98200372A1008228DB /* GrayPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B96200372A1008228DB /* GrayPass.cpp */; };
+		73474B942003248F008228DB /* Efxbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B922003248F008228DB /* Efxbase.cpp */; };
+		73474B98200372A1008228DB /* TestEfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B96200372A1008228DB /* TestEfx.cpp */; };
 		735723D320045C3A00ACFB5A /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 735723D120045C3A00ACFB5A /* MainViewController.mm */; };
 		735723D420045C3A00ACFB5A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735723D220045C3A00ACFB5A /* MainViewController.xib */; };
 		735723D62004694D00ACFB5A /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 735723D52004694D00ACFB5A /* libc++.1.tbd */; };
@@ -159,12 +160,14 @@
 		6F62B98524394624B3AE30FE /* b2Island.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2Island.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/b2Island.cpp; sourceTree = "<group>"; };
 		70F4CF64DD324AD8BC5FDAE1 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2CollideCircle.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/b2CollideCircle.cpp; sourceTree = "<group>"; };
 		727937523A724D77B2355950 /* b2CircleShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2CircleShape.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/Shapes/b2CircleShape.h; sourceTree = "<group>"; };
+		7336A7182004BE2B00356F95 /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
+		7336A7192004BE2B00356F95 /* Particle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Particle.hpp; path = ../src/Particle.hpp; sourceTree = "<group>"; };
 		73474B8F200323BC008228DB /* FilterMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FilterMgr.cpp; path = ../src/FilterMgr.cpp; sourceTree = "<group>"; };
 		73474B90200323BC008228DB /* FilterMgr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FilterMgr.hpp; path = ../src/FilterMgr.hpp; sourceTree = "<group>"; };
-		73474B922003248F008228DB /* Filterbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Filterbase.cpp; path = ../src/Filterbase.cpp; sourceTree = "<group>"; };
-		73474B932003248F008228DB /* Filterbase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Filterbase.hpp; path = ../src/Filterbase.hpp; sourceTree = "<group>"; };
-		73474B96200372A1008228DB /* GrayPass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GrayPass.cpp; path = ../src/Filter/GrayPass.cpp; sourceTree = "<group>"; };
-		73474B97200372A1008228DB /* GrayPass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = GrayPass.hpp; path = ../src/Filter/GrayPass.hpp; sourceTree = "<group>"; };
+		73474B922003248F008228DB /* Efxbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Efxbase.cpp; path = ../src/Efxbase.cpp; sourceTree = "<group>"; };
+		73474B932003248F008228DB /* Efxbase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Efxbase.hpp; path = ../src/Efxbase.hpp; sourceTree = "<group>"; };
+		73474B96200372A1008228DB /* TestEfx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestEfx.cpp; path = ../src/Filter/TestEfx.cpp; sourceTree = "<group>"; };
+		73474B97200372A1008228DB /* TestEfx.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = TestEfx.hpp; path = ../src/Filter/TestEfx.hpp; sourceTree = "<group>"; };
 		735723D020045C3A00ACFB5A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../src/MainViewController.h; sourceTree = "<group>"; };
 		735723D120045C3A00ACFB5A /* MainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MainViewController.mm; path = ../src/MainViewController.mm; sourceTree = "<group>"; };
 		735723D220045C3A00ACFB5A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = ../src/MainViewController.xib; sourceTree = "<group>"; };
@@ -357,19 +360,13 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				735723CC20045BAA00ACFB5A /* Native */,
+				7336A7172004BD0C00356F95 /* gl */,
+				735723DF200495C400ACFB5A /* cview */,
+				735723CC20045BAA00ACFB5A /* platform */,
 				73474B9520036FFD008228DB /* Filter */,
-				739250162001C17A0046B23B /* CaptureView.cpp */,
-				7392501B2001C17B0046B23B /* CaptureView.h */,
-				739250172001C17A0046B23B /* TestView.cpp */,
-				739250192001C17A0046B23B /* TestView.h */,
 				739250182001C17A0046B23B /* ViewController.cpp */,
 				7392501A2001C17B0046B23B /* ViewController.hpp */,
 				42CD1F4E7D7E460291A56F73 /* seeApp.mm */,
-				73474B8F200323BC008228DB /* FilterMgr.cpp */,
-				73474B90200323BC008228DB /* FilterMgr.hpp */,
-				73474B922003248F008228DB /* Filterbase.cpp */,
-				73474B932003248F008228DB /* Filterbase.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -512,23 +509,47 @@
 			name = OSC;
 			sourceTree = "<group>";
 		};
+		7336A7172004BD0C00356F95 /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				7336A7182004BE2B00356F95 /* Particle.cpp */,
+				7336A7192004BE2B00356F95 /* Particle.hpp */,
+			);
+			name = gl;
+			sourceTree = "<group>";
+		};
 		73474B9520036FFD008228DB /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				73474B96200372A1008228DB /* GrayPass.cpp */,
-				73474B97200372A1008228DB /* GrayPass.hpp */,
+				73474B8F200323BC008228DB /* FilterMgr.cpp */,
+				73474B90200323BC008228DB /* FilterMgr.hpp */,
+				73474B922003248F008228DB /* Efxbase.cpp */,
+				73474B932003248F008228DB /* Efxbase.hpp */,
+				73474B96200372A1008228DB /* TestEfx.cpp */,
+				73474B97200372A1008228DB /* TestEfx.hpp */,
 			);
 			name = Filter;
 			sourceTree = "<group>";
 		};
-		735723CC20045BAA00ACFB5A /* Native */ = {
+		735723CC20045BAA00ACFB5A /* platform */ = {
 			isa = PBXGroup;
 			children = (
 				735723D020045C3A00ACFB5A /* MainViewController.h */,
 				735723D120045C3A00ACFB5A /* MainViewController.mm */,
 				735723D220045C3A00ACFB5A /* MainViewController.xib */,
 			);
-			name = Native;
+			name = platform;
+			sourceTree = "<group>";
+		};
+		735723DF200495C400ACFB5A /* cview */ = {
+			isa = PBXGroup;
+			children = (
+				739250162001C17A0046B23B /* CaptureView.cpp */,
+				7392501B2001C17B0046B23B /* CaptureView.h */,
+				739250172001C17A0046B23B /* TestView.cpp */,
+				739250192001C17A0046B23B /* TestView.h */,
+			);
+			name = cview;
 			sourceTree = "<group>";
 		};
 		73924FE72001BD560046B23B /* poScene */ = {
@@ -745,6 +766,7 @@
 		00692BC614FF149000D0A05E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					00692BCE14FF149000D0A05E = {
 						DevelopmentTeam = ZCXT8D4NP2;
@@ -790,6 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7392501F2001C1AD0046B23B /* ViewController.hpp in Sources */,
+				7336A71A2004BE2B00356F95 /* Particle.cpp in Sources */,
 				739250142001BEB90046B23B /* _ViewController.cpp in Sources */,
 				739250152001BEB90046B23B /* _TextView.cpp in Sources */,
 				739250082001BEB00046B23B /* _DraggableView.cpp in Sources */,
@@ -801,7 +824,7 @@
 				7392500D2001BEB00046B23B /* _View.cpp in Sources */,
 				7392500E2001BEB00046B23B /* _ShapeView.cpp in Sources */,
 				7392500F2001BEB00046B23B /* _MatrixSet.cpp in Sources */,
-				73474B942003248F008228DB /* Filterbase.cpp in Sources */,
+				73474B942003248F008228DB /* Efxbase.cpp in Sources */,
 				739250102001BEB00046B23B /* _DragAndDrop.cpp in Sources */,
 				739250112001BEB00046B23B /* _Events.cpp in Sources */,
 				7392501E2001C17B0046B23B /* ViewController.cpp in Sources */,
@@ -840,7 +863,7 @@
 				657E0DD56F0141C2863A06C0 /* b2ContactSolver.cpp in Sources */,
 				779B4B454EBE48B5B6E4BD60 /* b2EdgeAndCircleContact.cpp in Sources */,
 				06D3FFC12BFE46DF954A2DA3 /* b2EdgeAndPolygonContact.cpp in Sources */,
-				73474B98200372A1008228DB /* GrayPass.cpp in Sources */,
+				73474B98200372A1008228DB /* TestEfx.cpp in Sources */,
 				ECA0BFDCFD584769A5333ED2 /* b2PolygonAndCircleContact.cpp in Sources */,
 				7392501C2001C17B0046B23B /* CaptureView.cpp in Sources */,
 				036A5233AFDC4691B596B541 /* b2PolygonContact.cpp in Sources */,
@@ -870,19 +893,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					arm64,
-				);
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CINDER_PATH = ../../../cinder_master;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -890,14 +927,19 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\"",
 					../../../cinder_master/blocks/Box2D/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/OpenCV3/include ../../../cinder_master/blocks/MotionManager/src ../../../cinder_master/blocks/OSC/src";
@@ -908,28 +950,48 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CINDER_PATH = ../../../cinder_master;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"$(inherited)",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\"",
 					../../../cinder_master/blocks/Box2D/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -941,7 +1003,6 @@
 		00692BF614FF149000D0A05E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -973,6 +1034,7 @@
 					"-lz",
 					"\"../blocks/OpenCV3/lib/ios-sim/libopencv.a\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d3c0769d-d183-4bc2-9719-eaa23358d2d5";
 				PROVISIONING_PROFILE_SPECIFIER = nghia_provisioning;
@@ -983,7 +1045,6 @@
 		00692BF714FF149000D0A05E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -1015,6 +1076,7 @@
 					"-lz",
 					"\"../blocks/OpenCV3/lib/ios-sim/libopencv.a\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d3c0769d-d183-4bc2-9719-eaa23358d2d5";
 				PROVISIONING_PROFILE_SPECIFIER = nghia_provisioning;

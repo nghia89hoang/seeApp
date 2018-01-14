@@ -11,5 +11,8 @@ namespace see {
     FilterMgr::FilterMgr() {
         
     }
+    FilterMgr::~FilterMgr() {
+        
+    }
     
 }

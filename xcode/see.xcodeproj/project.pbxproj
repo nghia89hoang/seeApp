@@ -44,6 +44,11 @@
 		73235F47200283FA008E22B3 /* vignette.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73235F46200283FA008E22B3 /* vignette.frag */; };
 		73235F4B200284B3008E22B3 /* cell.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73235F4A200284B3008E22B3 /* cell.frag */; };
 		73235F4D20028600008E22B3 /* scanline.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73235F4C20028600008E22B3 /* scanline.frag */; };
+		7327D5B020098FB700634012 /* Efxbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5A820098FB600634012 /* Efxbase.cpp */; };
+		7327D5B120098FB700634012 /* seeApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5A920098FB600634012 /* seeApp.mm */; };
+		7327D5B320098FB700634012 /* FilterMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5AB20098FB700634012 /* FilterMgr.cpp */; };
+		7327D5B420098FB700634012 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5AF20098FB700634012 /* Particle.cpp */; };
+		7327D5B720098FC500634012 /* TestEfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5B520098FC500634012 /* TestEfx.cpp */; };
 		737826AB1FFE15C700249F04 /* TestView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737826A91FFE15C700249F04 /* TestView.cpp */; };
 		73924D0C2001A6020046B23B /* posterize.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0B2001A6020046B23B /* posterize.frag */; };
 		73924D0E2001A6F60046B23B /* line.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0D2001A6F60046B23B /* line.frag */; };
@@ -103,7 +108,6 @@
 		F021A459BDFD4C1DBAF98964 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB9597394CEF4B7E8F6754A5 /* b2ContactSolver.cpp */; };
 		F50B733CA4EC43998D807BD0 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEF9A13DEA4BA1B9310AC9 /* b2RevoluteJoint.cpp */; };
 		F6037E6B234B4260983FB385 /* b2FrictionJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A3AE741B43FC95ED4560 /* b2FrictionJoint.cpp */; };
-		FAD99C63F6404DA896F38C1B /* seeApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DFD503CDE6241178169D836 /* seeApp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,7 +166,6 @@
 		6155FA849F27406EAAE7DFFF /* b2CircleContact.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2CircleContact.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Contacts/b2CircleContact.cpp; sourceTree = "<group>"; };
 		6461436361334D4BAD4ED8E0 /* b2PolygonShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2PolygonShape.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/Shapes/b2PolygonShape.h; sourceTree = "<group>"; };
 		64F4601B34414BA78BE92716 /* b2EdgeAndPolygonContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2EdgeAndPolygonContact.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h; sourceTree = "<group>"; };
-		6DFD503CDE6241178169D836 /* seeApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = seeApp.cpp; path = ../src/seeApp.cpp; sourceTree = "<group>"; };
 		708C348EC05A4C7BA4816FBC /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		73235F4020027F0A008E22B3 /* worhol.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = worhol.frag; sourceTree = "<group>"; };
 		73235F422002801D008E22B3 /* copy.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = copy.frag; sourceTree = "<group>"; };
@@ -170,6 +173,15 @@
 		73235F46200283FA008E22B3 /* vignette.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vignette.frag; sourceTree = "<group>"; };
 		73235F4A200284B3008E22B3 /* cell.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cell.frag; sourceTree = "<group>"; };
 		73235F4C20028600008E22B3 /* scanline.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = scanline.frag; sourceTree = "<group>"; };
+		7327D5A720098FB600634012 /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Particle.hpp; path = ../src/Particle.hpp; sourceTree = "<group>"; };
+		7327D5A820098FB600634012 /* Efxbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Efxbase.cpp; path = ../src/Efxbase.cpp; sourceTree = "<group>"; };
+		7327D5A920098FB600634012 /* seeApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = seeApp.mm; path = ../src/seeApp.mm; sourceTree = "<group>"; };
+		7327D5AB20098FB700634012 /* FilterMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FilterMgr.cpp; path = ../src/FilterMgr.cpp; sourceTree = "<group>"; };
+		7327D5AC20098FB700634012 /* Efxbase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Efxbase.hpp; path = ../src/Efxbase.hpp; sourceTree = "<group>"; };
+		7327D5AD20098FB700634012 /* FilterMgr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FilterMgr.hpp; path = ../src/FilterMgr.hpp; sourceTree = "<group>"; };
+		7327D5AF20098FB700634012 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
+		7327D5B520098FC500634012 /* TestEfx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestEfx.cpp; path = ../src/Filter/TestEfx.cpp; sourceTree = "<group>"; };
+		7327D5B620098FC500634012 /* TestEfx.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestEfx.hpp; path = ../src/Filter/TestEfx.hpp; sourceTree = "<group>"; };
 		737826A91FFE15C700249F04 /* TestView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestView.cpp; path = ../src/TestView.cpp; sourceTree = "<group>"; };
 		737826AA1FFE15C700249F04 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestView.h; path = ../src/TestView.h; sourceTree = "<group>"; };
 		73924D0B2001A6020046B23B /* posterize.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = posterize.frag; sourceTree = "<group>"; };
@@ -317,8 +329,16 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7327D5B520098FC500634012 /* TestEfx.cpp */,
+				7327D5B620098FC500634012 /* TestEfx.hpp */,
+				7327D5A820098FB600634012 /* Efxbase.cpp */,
+				7327D5AC20098FB700634012 /* Efxbase.hpp */,
+				7327D5AB20098FB700634012 /* FilterMgr.cpp */,
+				7327D5AD20098FB700634012 /* FilterMgr.hpp */,
+				7327D5AF20098FB700634012 /* Particle.cpp */,
+				7327D5A720098FB600634012 /* Particle.hpp */,
+				7327D5A920098FB600634012 /* seeApp.mm */,
 				73E23D511FFF322C00389721 /* Views */,
-				6DFD503CDE6241178169D836 /* seeApp.cpp */,
 				73E23D1E1FFF0C9F00389721 /* ViewController.cpp */,
 				73E23D1F1FFF0C9F00389721 /* ViewController.hpp */,
 			);
@@ -799,7 +819,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E23D4E1FFF11E500389721 /* _ShapeView.cpp in Sources */,
-				FAD99C63F6404DA896F38C1B /* seeApp.cpp in Sources */,
 				CD47BCAD76B640B9AF82049C /* b2BroadPhase.cpp in Sources */,
 				73E23D4C1FFF11E500389721 /* _ViewController.cpp in Sources */,
 				EC2A89DA0718426AADD5F663 /* b2CollideCircle.cpp in Sources */,
@@ -812,6 +831,7 @@
 				A0D08DEFC0D742B89A82A421 /* b2Collision.cpp in Sources */,
 				B49957B06B674B4C8C7D3B37 /* b2Distance.cpp in Sources */,
 				73E23D4B1FFF11E500389721 /* _ImageView.cpp in Sources */,
+				7327D5B420098FB700634012 /* Particle.cpp in Sources */,
 				DEFDF50227FE4C619249F426 /* b2DynamicTree.cpp in Sources */,
 				73E23D201FFF0C9F00389721 /* ViewController.cpp in Sources */,
 				C1039C02B05241E2BA5F9659 /* b2TimeOfImpact.cpp in Sources */,
@@ -825,6 +845,7 @@
 				73E23D491FFF11E500389721 /* _MatrixSet.cpp in Sources */,
 				E33B9F8193F94EF38745BE8F /* b2Math.cpp in Sources */,
 				73E23D461FFF11E500389721 /* _DraggableView.cpp in Sources */,
+				7327D5B720098FC500634012 /* TestEfx.cpp in Sources */,
 				40416C87253345CEB641B97C /* b2Settings.cpp in Sources */,
 				4D06E160BB2C469AB5C8BB28 /* b2StackAllocator.cpp in Sources */,
 				7F96E27B943D4EF8889EECDA /* b2Timer.cpp in Sources */,
@@ -833,6 +854,8 @@
 				3202A96AEAB345D89ACD7934 /* b2Fixture.cpp in Sources */,
 				73E23D451FFF11E500389721 /* _ScrollView.cpp in Sources */,
 				7BFD4367F8EF450082845AEA /* b2Island.cpp in Sources */,
+				7327D5B120098FB700634012 /* seeApp.mm in Sources */,
+				7327D5B320098FB700634012 /* FilterMgr.cpp in Sources */,
 				73E23D431FFF11E500389721 /* _Button.cpp in Sources */,
 				73E23D441FFF11E500389721 /* _ButtonSet.cpp in Sources */,
 				07E690F168D34416B3E08BD0 /* b2World.cpp in Sources */,
@@ -857,6 +880,7 @@
 				29D92BA031314A769B473AFA /* b2PulleyJoint.cpp in Sources */,
 				73E23D421FFF11E500389721 /* _EventCenter.cpp in Sources */,
 				F50B733CA4EC43998D807BD0 /* b2RevoluteJoint.cpp in Sources */,
+				7327D5B020098FB700634012 /* Efxbase.cpp in Sources */,
 				36633801B8724315817A15A5 /* b2RopeJoint.cpp in Sources */,
 				ABBE2DCF9F2B485BA94FD0A5 /* b2WeldJoint.cpp in Sources */,
 				1231149FD24D4AA68147559F /* b2WheelJoint.cpp in Sources */,

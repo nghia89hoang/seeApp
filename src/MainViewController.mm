@@ -16,6 +16,8 @@
 @end
 
 @implementation MainViewController
+@synthesize prevButtonCallback = _prevButtonCallback;
+@synthesize nextButtonCallback = _nextButtonCallback;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +38,18 @@
 - (void)addCinderViewAsBarButton {
     
 }
+
+- (IBAction)prevButtonTapped:(id)sender {
+    if(_prevButtonCallback) {
+        _prevButtonCallback();
+    }
+}
+- (IBAction)nextButtonTapped:(id)sender {
+    if(_nextButtonCallback) {
+        _nextButtonCallback();
+    }
+}
+
 /*
 #pragma mark - Navigation
 

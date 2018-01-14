@@ -4,15 +4,16 @@
 #include "cinder/Log.h"
 #include "ViewController.hpp"
 #include "poScene/Scene.h"
-#include "MainViewController.h"
-
+#if defined(CINDER_COCOA_TOUCH)
+    #include "MainViewController.h"
+#endif
 using namespace ci;
 using namespace ci::app;
 using namespace std;
 using namespace po::scene;
-
+#if defined(CINDER_COCOA_TOUCH)
 MainViewController *sMainViewController = [[MainViewController alloc] init];
-
+#endif
 class seeApp : public App {
   public:
 	void setup() override;
@@ -23,6 +24,8 @@ class seeApp : public App {
     
     static void prepareSettings(Settings *setting);
 private:
+    void onNextView();
+    void onPrevView();
 #pragma mark FUNC
     void printDevice();
     void setupCamera();
@@ -37,13 +40,19 @@ private:
 
 void seeApp::setup()
 {
-#if 1
-    [sMainViewController addCinderViewToFront];
-#else
-    [sMainViewController addCinderViewAsBarButton];
+#if defined(CINDER_COCOA_TOUCH)
+    #if 1
+        [sMainViewController addCinderViewToFront];
+    #else
+        [sMainViewController addCinderViewAsBarButton];
+    #endif
 #endif
     mVc = see::ViewController::create();
     mScene = Scene::create(mVc);
+#if defined(CINDER_COCOA_TOUCH)
+    [sMainViewController setPrevButtonCallback: bind(&seeApp::onPrevView, this)];
+    [sMainViewController setNextButtonCallback: bind(&seeApp::onNextView, this)];
+#endif
 }
 
 void seeApp::update()
@@ -63,11 +72,21 @@ void seeApp::mouseDown( ci::app::MouseEvent event)
 void seeApp::keyDown(cinder::app::KeyEvent event) {
     
 }
-
+#if defined(CINDER_COCOA_TOUCH)
 void seeApp::prepareSettings(cinder::app::AppCocoaTouch::Settings *settings) {
     settings->prepareWindow(Window::Format().rootViewController(sMainViewController));
-    settings->setFrameRate(30.0f);
+    settings->setFrameRate(30.0f);    
 }
-
+#else
+void seeApp::prepareSettings(cinder::app::AppBase::Settings *setting) {
+   setting->setFrameRate(30.0f);
+}
+#endif
+void seeApp::onNextView() {
+    mVc->changeView(true);
+}
+void seeApp::onPrevView() {
+    mVc->changeView(false);
+}
 
 CINDER_APP( seeApp, RendererGl, seeApp::prepareSettings )

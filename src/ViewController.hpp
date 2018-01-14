@@ -9,28 +9,31 @@
 #define FaceScene_hpp
 
 #include <stdio.h>
-#include <list>
+//#include <list>
+#include <vector>
 #include "poScene/ViewController.h"
 #include "poScene/View.h"
-#include "TestView.h"
-#include "CaptureView.h"
 using namespace std;
+using namespace cinder;
+
+static ivec2 sScreenSize;
+
 namespace see {
 
     class ViewController;
     typedef std::shared_ptr<ViewController> ViewControllerRef;
 
     class ViewController : public po::scene::ViewController{
-    public:
+    public:        
         static ViewControllerRef create();
         void viewDidLoad() override;
+        void changeView(bool isNext = true);
     protected:
         ViewController();
     private:
-        list<ViewRef> mListView;
+        vector<po::scene::ViewRef> mListView;
+        int mCurView;
         po::scene::ViewRef mRoot;
-        TestViewRef mTestView;
-        CaptureViewRef mCaptureView;
     };
 
 }

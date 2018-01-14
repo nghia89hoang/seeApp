@@ -10,7 +10,8 @@
 
 #include <stdio.h>
 #include <list>
-#include "Filterbase.hpp"
+#include <map>
+#include "Efxbase.hpp"
 using namespace std;
 
 namespace see {
@@ -25,9 +26,11 @@ namespace see {
             }
             return mInstance;
         }
+        virtual ~FilterMgr();
     protected:
         FilterMgr();
-        static FilterMgrRef mInstance;        
+        static FilterMgrRef mInstance;
+        map<int, EfxbaseRef> mEfxMap;
     };
 }
 

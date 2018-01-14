@@ -8,8 +8,10 @@
 #include "ViewController.hpp"
 #include "cinder/app/App.h"
 #include "poScene/TextView.h"
-
+#include "TestView.h"
+#include "CaptureView.h"
 using namespace po::scene;
+using namespace cinder;
 namespace see {
     
     ViewControllerRef ViewController::create(){
@@ -17,23 +19,37 @@ namespace see {
     }
 
     ViewController::ViewController() {
+        mCurView = 0;
+        ivec2 size(ci::app::getWindowSize());
+        float scale = ci::app::getWindowContentScale();
+        sScreenSize = ivec2(float(size.x) * scale, float(size.y) * scale);
+        CaptureViewRef capView = CaptureView::create(1280, 720);
+        mListView.push_back(capView);
+        //
+        TestViewRef testView = TestView::create();
+        mListView.push_back(testView);
         
     }
 
     void ViewController::viewDidLoad() {
         mRoot = View::create();
-//        mRoot->setPosition(ci::app::getWindowWidth()/2, ci::app::getWindowHeight()/2);
         getView()->addSubview(mRoot);
-        
-//        mTestView = TestView::create();
-//        mRoot->addSubview(mTestView);
-        Area a(ci::app::getWindowBounds());
-        ivec2 s(ci::app::getWindowSize());
-        float scale = ci::app::getWindowContentScale();
-        ivec2 screenSize(float(s.x) * scale, float(s.y) * scale);
-        mCaptureView = CaptureView::create(screenSize.x, screenSize.y);
-        mRoot->addSubview(mCaptureView);
-        
+        mRoot->addSubview(mListView[mCurView]);
     }
-
+    
+    void ViewController::changeView(bool isNext) {
+        po::scene::ViewRef v = mListView[mCurView];
+        v->removeFromSuperview();
+        if(isNext) {
+            if(++mCurView >= mListView.size()) {
+                mCurView = 0;
+            }
+        } else {
+            if(--mCurView < 0) {
+                mCurView = mListView.size() - 1;
+            }
+        }
+        mRoot->addSubview(mListView[mCurView]);
+    }
+    
 }

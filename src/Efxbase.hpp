@@ -1,12 +1,12 @@
 //
-//  Filterbase.hpp
+//  Efxbase.hpp
 //  see
 //
 //  Created by Hoang Ngoc Nghia on 1/8/18.
 //
 
-#ifndef Filterbase_hpp
-#define Filterbase_hpp
+#ifndef Efxbase_hpp
+#define Efxbase_hpp
 
 #include <stdio.h>
 #include <list>
@@ -17,28 +17,33 @@ using namespace std;
 
 namespace see {
     class RdPass;
-    class Filterbase;
+    class Efxbase;
     
-    typedef std::shared_ptr<Filterbase> FilterbaseRef;
+    typedef std::shared_ptr<Efxbase> EfxbaseRef;
     typedef std::shared_ptr<RdPass> RdPassRef;
     
-    class Filterbase {
+    class Efxbase {
     public:
-        virtual ~Filterbase();
-        static FilterbaseRef create() {
-            FilterbaseRef ref = FilterbaseRef(new Filterbase());
+        virtual ~Efxbase();
+        static EfxbaseRef create(gl::FboRef fbo = nullptr) {
+            EfxbaseRef ref = EfxbaseRef(new Efxbase());
+            ref->setFbo(fbo);
             ref->setup();            
             return ref;
         }
+        void updateInputTexture(gl::TextureRef inputTexture);
         void setFinalPass(RdPassRef finalPass);
-        
+        void setFbo(gl::FboRef fbo);
         virtual void setup();
         virtual void update();
         virtual void draw();
         void buildRenderList();
         
     protected:
-        Filterbase();
+        Efxbase();
+        // TODO: make a list
+        gl::TextureRef mInputTexture;
+        gl::FboRef mFbo;
         RdPassRef mFinalPass;
         list<RdPass*> mRenderQueue;
     };
@@ -57,16 +62,19 @@ namespace see {
         virtual void setup();
         virtual void draw();
         virtual void update();
-        void setBatch(gl::BatchRef batchRef);
+        bool isHeadPass() {
+            return (mPrevRdPass.size() == 0);
+        }
+        void applyToBatch(gl::BatchRef batchRef);
 //        RdPass* createBatch(const gl::VboMeshRef &vboMesh, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping = gl::Batch::AttributeMapping());
 //        RdPass* createBatch(const geom::Source &source, const fs::path &vertPath, const fs::path &fragPath, const gl::Batch::AttributeMapping &attributeMapping = gl::Batch::AttributeMapping());
         RdPass* createGlslProg(const fs::path &vertPath, const fs::path &fragPath);
-        RdPass* setInputTexture(int slot, gl::TextureRef tex);
+        RdPass* setInputTexture(gl::TextureRef tex, int slot = 0);
         RdPass* setFbo(gl::FboRef fbo);
         void chainNext(RdPassRef nextPass, int textureUnit = 0, GLenum attachment = GL_COLOR_ATTACHMENT0);
         void buildRenderQueue(list<RdPass*> &renderQueue);
     protected:
-        // TODO: Handle VBO, Batching
+        //!!!!: TODO: Handle VBO, Batching
         gl::BatchRef mBatch;
         RdPass();
         list<RdPass*> mPrevRdPass;
@@ -76,4 +84,4 @@ namespace see {
     };
 }
 
-#endif /* Filterbase_hpp */
+#endif /* Efxbase_hpp */

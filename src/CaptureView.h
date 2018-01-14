@@ -8,7 +8,7 @@
 #ifndef CaptureView_hpp
 #define CaptureView_hpp
 #include "poScene/View.h"
-#include "GrayPass.hpp"
+#include "TestEfx.hpp"
 #include <stdio.h>
 
 using namespace cinder;
@@ -33,9 +33,8 @@ namespace see {
         CaptureView();        
         void initSobelProg();
     private:
-        int mWidth, mHeight;
-        GrayPassRef mGrayPass;
-        FilterbaseRef mFilter;
+        int mWidth, mHeight;        
+        TestEfxRef mEfx;
         CaptureRef mCapture;
         gl::FboRef mFbo;
         gl::GlslProgRef mProg;

@@ -30,13 +30,44 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYb-8r-iqY" userLabel="footer">
                     <rect key="frame" x="0.0" y="578" width="375" height="89"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-Jk-DKM">
-                            <rect key="frame" x="164" y="29" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-Jk-DKM">
+                            <rect key="frame" x="8" y="8" width="30" height="73"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="&lt;"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius ">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="prevButtonTapped:" destination="-1" eventType="touchUpInside" id="AiN-s5-glP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-Pt-FlC">
+                            <rect key="frame" x="337" y="8" width="30" height="73"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="&gt;"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius ">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="Tee-Eg-OsQ"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RLj-Jk-DKM" firstAttribute="top" secondItem="KYb-8r-iqY" secondAttribute="top" constant="8" id="5hy-As-ah6"/>
+                        <constraint firstItem="RLj-Jk-DKM" firstAttribute="centerY" secondItem="KYb-8r-iqY" secondAttribute="centerY" id="YDY-cv-5zS"/>
+                        <constraint firstAttribute="bottom" secondItem="RLj-Jk-DKM" secondAttribute="bottom" constant="8" id="eaY-yj-RER"/>
+                        <constraint firstAttribute="bottom" secondItem="7mB-Pt-FlC" secondAttribute="bottom" constant="8" id="gkA-WR-spn"/>
+                        <constraint firstItem="7mB-Pt-FlC" firstAttribute="top" secondItem="KYb-8r-iqY" secondAttribute="top" constant="8" id="jwq-Bz-Qty"/>
+                        <constraint firstAttribute="trailing" secondItem="7mB-Pt-FlC" secondAttribute="trailing" constant="8" id="peZ-bW-Gfz"/>
+                        <constraint firstItem="7mB-Pt-FlC" firstAttribute="centerY" secondItem="KYb-8r-iqY" secondAttribute="centerY" id="rgh-9U-6BC"/>
+                        <constraint firstItem="RLj-Jk-DKM" firstAttribute="leading" secondItem="KYb-8r-iqY" secondAttribute="leading" constant="8" id="tmV-eS-X1h"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
