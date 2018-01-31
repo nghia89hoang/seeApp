@@ -8,8 +8,11 @@
 #include "ViewController.hpp"
 #include "cinder/app/App.h"
 #include "poScene/TextView.h"
+#include "StillImageView.h"
 #include "TestView.h"
 #include "CaptureView.h"
+#include "ExpView.h"
+
 using namespace po::scene;
 using namespace cinder;
 namespace see {
@@ -23,11 +26,19 @@ namespace see {
         ivec2 size(ci::app::getWindowSize());
         float scale = ci::app::getWindowContentScale();
         sScreenSize = ivec2(float(size.x) * scale, float(size.y) * scale);
+        //
+        StillImageViewRef stillImageView = StillImageView::create();
+        mListView.push_back(stillImageView);
+        //
+        ExpViewRef expView = ExpView::create();
+        mListView.push_back(expView);        
+        //
         CaptureViewRef capView = CaptureView::create(1280, 720);
         mListView.push_back(capView);
         //
         TestViewRef testView = TestView::create();
         mListView.push_back(testView);
+        
         
     }
 
@@ -49,7 +60,10 @@ namespace see {
                 mCurView = mListView.size() - 1;
             }
         }
+        mListView[mCurView]->setup();
         mRoot->addSubview(mListView[mCurView]);
     }
-    
+    void ViewController::keyDown(cinder::app::KeyEvent event) {
+        
+    }
 }

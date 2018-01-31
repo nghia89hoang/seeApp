@@ -21,19 +21,18 @@ namespace see {
     }
     TestViewRef TestView::create() {
         TestViewRef ref = TestViewRef(new TestView());
-        ref->init();
+//        ref->setup();
         return ref;
-    }
-    void TestView::init() {
-        mCam.lookAt(vec3(5,2,5), vec3(0,1,0));
-        gl::setMatrices(mCam);
-        auto lambert = gl::ShaderDef().lambert().color();
-        mShader = gl::getStockShader(lambert);
-        mBalls = gl::Batch::create(geom::Sphere(), mShader);
     }
     
     void TestView::setup() {
-        
+        if(mShader == nullptr) {
+            mCam.lookAt(vec3(5,2,5), vec3(0,1,0));
+            gl::setMatrices(mCam);
+            auto lambert = gl::ShaderDef().lambert().color();
+            mShader = gl::getStockShader(lambert);
+            mBalls = gl::Batch::create(geom::Sphere(), mShader);
+        }
     }
     void TestView::update() {
         

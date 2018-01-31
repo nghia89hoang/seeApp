@@ -7,6 +7,10 @@
 #if defined(CINDER_COCOA_TOUCH)
     #include "MainViewController.h"
 #endif
+
+#define SCREEN_W (800)
+#define SCREEN_H (600)
+
 using namespace ci;
 using namespace ci::app;
 using namespace std;
@@ -70,7 +74,18 @@ void seeApp::mouseDown( ci::app::MouseEvent event)
 }
 
 void seeApp::keyDown(cinder::app::KeyEvent event) {
-    
+    switch(event.getCode()) {
+        case KeyEvent::KEY_LEFT:
+            onPrevView();
+            break;
+        case KeyEvent::KEY_RIGHT:
+            onNextView();
+            break;
+        case KeyEvent::KEY_1:
+        case KeyEvent::KEY_2:
+            mVc->keyDown(event);
+            break;
+    }
 }
 #if defined(CINDER_COCOA_TOUCH)
 void seeApp::prepareSettings(cinder::app::AppCocoaTouch::Settings *settings) {
@@ -79,7 +94,8 @@ void seeApp::prepareSettings(cinder::app::AppCocoaTouch::Settings *settings) {
 }
 #else
 void seeApp::prepareSettings(cinder::app::AppBase::Settings *setting) {
-   setting->setFrameRate(30.0f);
+    setting->setFrameRate(30.0f);
+    setting->setWindowSize(SCREEN_W, SCREEN_H);
 }
 #endif
 void seeApp::onNextView() {

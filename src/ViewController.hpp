@@ -28,6 +28,7 @@ namespace see {
         static ViewControllerRef create();
         void viewDidLoad() override;
         void changeView(bool isNext = true);
+        void keyDown(cinder::app::KeyEvent event);
     protected:
         ViewController();
     private:

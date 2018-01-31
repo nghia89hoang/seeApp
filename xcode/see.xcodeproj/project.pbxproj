@@ -49,6 +49,7 @@
 		7327D5B320098FB700634012 /* FilterMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5AB20098FB700634012 /* FilterMgr.cpp */; };
 		7327D5B420098FB700634012 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5AF20098FB700634012 /* Particle.cpp */; };
 		7327D5B720098FC500634012 /* TestEfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5B520098FC500634012 /* TestEfx.cpp */; };
+		7344840B2021924500D03C0C /* StillImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 734484092021924500D03C0C /* StillImageView.cpp */; };
 		737826AB1FFE15C700249F04 /* TestView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737826A91FFE15C700249F04 /* TestView.cpp */; };
 		73924D0C2001A6020046B23B /* posterize.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0B2001A6020046B23B /* posterize.frag */; };
 		73924D0E2001A6F60046B23B /* line.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0D2001A6F60046B23B /* line.frag */; };
@@ -80,6 +81,8 @@
 		73E23D692000EDCA00389721 /* dream.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73E23D682000EDCA00389721 /* dream.frag */; };
 		73E23D6B2000F7F800389721 /* erosion.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73E23D6A2000F7F800389721 /* erosion.frag */; };
 		73E23D6D2000F8D700389721 /* hexpix.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73E23D6C2000F8D700389721 /* hexpix.frag */; };
+		73EA3F562012EA6200ECE7AC /* ExpView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73EA3F542012EA6200ECE7AC /* ExpView.cpp */; };
+		73EA3F5A201305E300ECE7AC /* ParticleController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73EA3F58201305E300ECE7AC /* ParticleController.cpp */; };
 		7BFD4367F8EF450082845AEA /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4A7BB67AADF4B2B86D17992 /* b2Island.cpp */; };
 		7F96E27B943D4EF8889EECDA /* b2Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B8C26E4CC4C299A464B12 /* b2Timer.cpp */; };
 		841A542A785646EDA079BAAB /* Osc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5377ECE4123477AB57FAA09 /* Osc.cpp */; };
@@ -173,7 +176,7 @@
 		73235F46200283FA008E22B3 /* vignette.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vignette.frag; sourceTree = "<group>"; };
 		73235F4A200284B3008E22B3 /* cell.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cell.frag; sourceTree = "<group>"; };
 		73235F4C20028600008E22B3 /* scanline.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = scanline.frag; sourceTree = "<group>"; };
-		7327D5A720098FB600634012 /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Particle.hpp; path = ../src/Particle.hpp; sourceTree = "<group>"; };
+		7327D5A720098FB600634012 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../src/Particle.h; sourceTree = "<group>"; };
 		7327D5A820098FB600634012 /* Efxbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Efxbase.cpp; path = ../src/Efxbase.cpp; sourceTree = "<group>"; };
 		7327D5A920098FB600634012 /* seeApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = seeApp.mm; path = ../src/seeApp.mm; sourceTree = "<group>"; };
 		7327D5AB20098FB700634012 /* FilterMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FilterMgr.cpp; path = ../src/FilterMgr.cpp; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 		7327D5AF20098FB700634012 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
 		7327D5B520098FC500634012 /* TestEfx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestEfx.cpp; path = ../src/Filter/TestEfx.cpp; sourceTree = "<group>"; };
 		7327D5B620098FC500634012 /* TestEfx.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestEfx.hpp; path = ../src/Filter/TestEfx.hpp; sourceTree = "<group>"; };
+		734484092021924500D03C0C /* StillImageView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StillImageView.cpp; path = ../src/StillImageView.cpp; sourceTree = "<group>"; };
+		7344840A2021924500D03C0C /* StillImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StillImageView.h; path = ../src/StillImageView.h; sourceTree = "<group>"; };
 		737826A91FFE15C700249F04 /* TestView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestView.cpp; path = ../src/TestView.cpp; sourceTree = "<group>"; };
 		737826AA1FFE15C700249F04 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestView.h; path = ../src/TestView.h; sourceTree = "<group>"; };
 		73924D0B2001A6020046B23B /* posterize.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = posterize.frag; sourceTree = "<group>"; };
@@ -233,6 +238,10 @@
 		73E23D682000EDCA00389721 /* dream.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = dream.frag; sourceTree = "<group>"; };
 		73E23D6A2000F7F800389721 /* erosion.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = erosion.frag; sourceTree = "<group>"; };
 		73E23D6C2000F8D700389721 /* hexpix.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = hexpix.frag; sourceTree = "<group>"; };
+		73EA3F542012EA6200ECE7AC /* ExpView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ExpView.cpp; path = ../src/ExpView.cpp; sourceTree = "<group>"; };
+		73EA3F552012EA6200ECE7AC /* ExpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExpView.h; path = ../src/ExpView.h; sourceTree = "<group>"; };
+		73EA3F58201305E300ECE7AC /* ParticleController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleController.cpp; path = ../src/ParticleController.cpp; sourceTree = "<group>"; };
+		73EA3F59201305E300ECE7AC /* ParticleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParticleController.h; path = ../src/ParticleController.h; sourceTree = "<group>"; };
 		74EAD6D66E79481C978D6BEB /* b2WeldJoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2WeldJoint.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Joints/b2WeldJoint.h; sourceTree = "<group>"; };
 		756B280344624DACB85A55E6 /* b2FrictionJoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2FrictionJoint.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Dynamics/Joints/b2FrictionJoint.h; sourceTree = "<group>"; };
 		777E67F00D3E4144B4A263B7 /* b2CollidePolygon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2CollidePolygon.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/b2CollidePolygon.cpp; sourceTree = "<group>"; };
@@ -329,16 +338,12 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				7327D5B520098FC500634012 /* TestEfx.cpp */,
-				7327D5B620098FC500634012 /* TestEfx.hpp */,
-				7327D5A820098FB600634012 /* Efxbase.cpp */,
-				7327D5AC20098FB700634012 /* Efxbase.hpp */,
+				73EA3F57201305CA00ECE7AC /* particle */,
+				731283EF2011F67F00D8A04B /* efx */,
+				73E23D511FFF322C00389721 /* Views */,
 				7327D5AB20098FB700634012 /* FilterMgr.cpp */,
 				7327D5AD20098FB700634012 /* FilterMgr.hpp */,
-				7327D5AF20098FB700634012 /* Particle.cpp */,
-				7327D5A720098FB600634012 /* Particle.hpp */,
 				7327D5A920098FB600634012 /* seeApp.mm */,
-				73E23D511FFF322C00389721 /* Views */,
 				73E23D1E1FFF0C9F00389721 /* ViewController.cpp */,
 				73E23D1F1FFF0C9F00389721 /* ViewController.hpp */,
 			);
@@ -556,7 +561,18 @@
 			name = Joints;
 			sourceTree = "<group>";
 		};
-		73235F3F20027EF8008E22B3 /* filter */ = {
+		731283EF2011F67F00D8A04B /* efx */ = {
+			isa = PBXGroup;
+			children = (
+				7327D5B520098FC500634012 /* TestEfx.cpp */,
+				7327D5B620098FC500634012 /* TestEfx.hpp */,
+				7327D5A820098FB600634012 /* Efxbase.cpp */,
+				7327D5AC20098FB700634012 /* Efxbase.hpp */,
+			);
+			name = efx;
+			sourceTree = "<group>";
+		};
+		73235F3F20027EF8008E22B3 /* shader */ = {
 			isa = PBXGroup;
 			children = (
 				73235F422002801D008E22B3 /* copy.frag */,
@@ -578,7 +594,7 @@
 				73235F4A200284B3008E22B3 /* cell.frag */,
 				73235F4C20028600008E22B3 /* scanline.frag */,
 			);
-			path = filter;
+			path = shader;
 			sourceTree = "<group>";
 		};
 		73E23D211FFF110000389721 /* poScene */ = {
@@ -635,6 +651,10 @@
 				737826AA1FFE15C700249F04 /* TestView.h */,
 				73E23D521FFF324700389721 /* CaptureView.cpp */,
 				73E23D531FFF324700389721 /* CaptureView.h */,
+				73EA3F542012EA6200ECE7AC /* ExpView.cpp */,
+				73EA3F552012EA6200ECE7AC /* ExpView.h */,
+				734484092021924500D03C0C /* StillImageView.cpp */,
+				7344840A2021924500D03C0C /* StillImageView.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -642,12 +662,23 @@
 		73E23D551FFF58B200389721 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				73235F3F20027EF8008E22B3 /* filter */,
+				73235F3F20027EF8008E22B3 /* shader */,
 				73E23D561FFF58B200389721 /* haarcascade_eye.xml */,
 				73E23D571FFF58B200389721 /* haarcascade_frontalface_alt.xml */,
 			);
 			name = assets;
 			path = ../assets;
+			sourceTree = "<group>";
+		};
+		73EA3F57201305CA00ECE7AC /* particle */ = {
+			isa = PBXGroup;
+			children = (
+				7327D5AF20098FB700634012 /* Particle.cpp */,
+				7327D5A720098FB600634012 /* Particle.h */,
+				73EA3F58201305E300ECE7AC /* ParticleController.cpp */,
+				73EA3F59201305E300ECE7AC /* ParticleController.h */,
+			);
+			name = particle;
 			sourceTree = "<group>";
 		};
 		7DE7C5252C4549CA84EAA474 /* cinder */ = {
@@ -836,6 +867,7 @@
 				73E23D201FFF0C9F00389721 /* ViewController.cpp in Sources */,
 				C1039C02B05241E2BA5F9659 /* b2TimeOfImpact.cpp in Sources */,
 				9A2213DA027B4CF09FF643B3 /* b2ChainShape.cpp in Sources */,
+				7344840B2021924500D03C0C /* StillImageView.cpp in Sources */,
 				1C0B07D854C24EF5BA2ED33E /* b2CircleShape.cpp in Sources */,
 				28E0903C51D04B36A782D42A /* b2EdgeShape.cpp in Sources */,
 				737826AB1FFE15C700249F04 /* TestView.cpp in Sources */,
@@ -853,6 +885,7 @@
 				C065F19BE5584491A83B6040 /* b2ContactManager.cpp in Sources */,
 				3202A96AEAB345D89ACD7934 /* b2Fixture.cpp in Sources */,
 				73E23D451FFF11E500389721 /* _ScrollView.cpp in Sources */,
+				73EA3F5A201305E300ECE7AC /* ParticleController.cpp in Sources */,
 				7BFD4367F8EF450082845AEA /* b2Island.cpp in Sources */,
 				7327D5B120098FB700634012 /* seeApp.mm in Sources */,
 				7327D5B320098FB700634012 /* FilterMgr.cpp in Sources */,
@@ -864,6 +897,7 @@
 				1D05CD4722E24D979E4144D5 /* b2ChainAndPolygonContact.cpp in Sources */,
 				97C9323D1BCD4F2DA1E4F3AC /* b2CircleContact.cpp in Sources */,
 				73E23D471FFF11E500389721 /* _View.cpp in Sources */,
+				73EA3F562012EA6200ECE7AC /* ExpView.cpp in Sources */,
 				705ED33DC1FB4FF0B3BA5AB2 /* b2Contact.cpp in Sources */,
 				F021A459BDFD4C1DBAF98964 /* b2ContactSolver.cpp in Sources */,
 				DC05E48A38E1464AB17E7AAF /* b2EdgeAndCircleContact.cpp in Sources */,
@@ -910,6 +944,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LLVM_LTO = YES_THIN;
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/macosx/$(CONFIGURATION)/libcinder.a\"",
 					../blocks/OpenCV3/lib/macosx/libopencv_calib3d.a,
@@ -958,6 +993,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LLVM_LTO = YES_THIN;
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/macosx/$(CONFIGURATION)/libcinder.a\"",
 					../blocks/OpenCV3/lib/macosx/libopencv_calib3d.a,

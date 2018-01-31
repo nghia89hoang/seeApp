@@ -20,12 +20,17 @@ namespace see {
         
     }
     void TestEfx::setup() {
+//        gl::Fbo::Format format;
+//        gl::FboRef fbo = gl::Fbo::create(mFbo->getWidth(), mFbo->getHeight(), format.depthTexture());
+        
         grayPass = RdPass::create();
-        grayPass->createGlslProg("filter/basic.vert", "filter/colorgrad.frag");
+        grayPass->createGlslProg("shader/basic.vert", "shader/copy.frag");
         grayPass->setFbo(mFbo);
         
         sobelPass = RdPass::create();
-        sobelPass->createGlslProg("filter/basic.vert", "filter/sobel.frag");
+        sobelPass->createGlslProg("shader/basic.vert", "shader/dream.frag");
+        sobelPass->setRenderBound(mFbo->getBounds());
+        sobelPass->setFbo(nullptr);
         
         grayPass->chainNext(sobelPass);
         setFinalPass(sobelPass);

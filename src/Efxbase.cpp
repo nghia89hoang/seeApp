@@ -47,6 +47,9 @@ namespace see {
     void Efxbase::updateInputTexture(gl::TextureRef inputTexture) {
         mInputTexture = inputTexture;
     }
+//    void Efxbase::blitScreen() {
+//        gl::drawSolidRect(getWindowBounds());
+//    }
     Efxbase::Efxbase() {
     }
     Efxbase::~Efxbase() {
@@ -67,7 +70,7 @@ namespace see {
         return ref;
     }
     void RdPass::setup() {
-        createGlslProg("filter/basic.vert", "filter/copy.frag");
+        createGlslProg("shader/basic.vert", "shader/copy.frag");
     }
     void RdPass::update() {
         
@@ -110,6 +113,10 @@ namespace see {
             r->buildRenderQueue(renderQueue);
         }
     }
+    void RdPass::setRenderBound(Rectf rect) {
+        mRenderBound = rect;
+    }
+    
     void RdPass::draw() {
         for(map<int, gl::TextureRef>::iterator it = mInputTexture.begin();
             it != mInputTexture.end(); ++it) {
@@ -120,9 +127,14 @@ namespace see {
             gl::ScopedFramebuffer s(mFboTarget);
             mBatch->draw();
         } else {
+            console() << "Window Bound: " << getWindowBounds() << "\n";
+            console() << "Window Bound(pxl): " << toPixels(getWindowBounds()) << "\n";
+            console() << "Window Size: " << getWindowBounds() << "\n";
             Rectf flippedBounds( 0, 0, getWindowHeight(), getWindowWidth() );
             Rectf doubleBound( 0, 0, getWindowWidth() * 2.0f, getWindowHeight() * 2.0f );
+            ivec2 flippedSize(getWindowHeight(), getWindowWidth());
             if(mFboTarget) {
+                console() << "Fbo Size: " << mFboTarget->getSize() << "\n";
                 Rectf flippedFbo( 0, 0, mFboTarget->getHeight(), mFboTarget->getWidth() );
                 gl::ScopedFramebuffer s(mFboTarget);
                 gl::ScopedViewport vp(ivec2(0), mFboTarget->getSize());
@@ -131,14 +143,20 @@ namespace see {
             } else {
 #if defined CINDER_COCOA_TOUCH
                 gl::rotate( M_PI / 2 );
-                gl::translate( 0, - toPixels(getWindowHeight()) );
+                gl::scale(mRenderBound.getHeight() / toPixels(getWindowWidth()), mRenderBound.getHeight() / toPixels(getWindowWidth()));
+                gl::translate( 0, -toPixels(getWindowHeight()) );
+#else
+                gl::scale(mRenderBound.getWidth() / toPixels(getWindowWidth()), mRenderBound.getHeight() / toPixels(getWindowHeight()));
 #endif
 //                gl::drawSolidRect(flippedBounds);
 //                gl::ScopedViewport vp(ivec2(0), mFboTarget->getSize());
 //                gl::ScopedViewport vp(ivec2(0), toPixels(getWindowSize()));
-//                    gl::setMatricesWindow( toPixels( vec2(getWindowHeight(), getWindowWidth()) ) , false );
+//                gl::setMatricesWindow( toPixels( vec2(getWindowHeight(), getWindowWidth()) ) , false );
+                gl::ScopedViewport vp(vec2(0,0), toPixels(getWindowSize()));
 //                gl::setMatricesWindow(toPixels(getWindowSize()));
                 gl::drawSolidRect(toPixels(getWindowBounds()), vec2(1,0), vec2(0,1));
+//                gl::drawSolidRect(mRenderBound, vec2(1,0), vec2(0,1));
+//                gl::drawSolidRect(mFboTarget->getBounds());
 //                gl::drawSolidRect(toPixels(flippedBounds));
 //                gl::drawSolidRect(mInputTexture[0]->getBounds());
 //                gl::draw(mInputTexture[0]);

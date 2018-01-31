@@ -23,24 +23,29 @@ namespace see {
     CaptureViewRef CaptureView::create(int width, int height) {
         console() << "Capture view created with size: "<<width <<" "<<height<<std::endl;
         CaptureViewRef ref = CaptureViewRef(new CaptureView());
-        ref->setup(width, height);
+        ref->mWidth = width;
+        ref->mHeight = height;
+//        ref->setup();
         return ref;
     }
-    void CaptureView::setup(int width, int height) {
-        mWidth = width;
-        mHeight = height;
+    void CaptureView::setup() {
+        if(mCapture) {
+            mCaptureTex.reset();
+            mCapture->start();
+            return;
+        }
         try {
-            initCapture(width, height);
+            initCapture(mWidth, mHeight);
             mCapture->start();
         } catch (ci::Exception &exec) {
             CI_LOG_EXCEPTION("Failed to init capture", exec);
         }
         
         gl::Fbo::Format format;
-        mFbo = gl::Fbo::create(width, height, format.depthTexture());
+        mFbo = gl::Fbo::create(mWidth, mHeight, format.depthTexture());
         
         mEfx = TestEfx::create(mFbo);
-        mEfx->setTexSize(vec2(width, height));
+        mEfx->setTexSize(vec2(mWidth, mHeight));
         
     }
 
@@ -68,14 +73,17 @@ namespace see {
 #if defined( CINDER_ANDROID )
                 std::swap( flippedBounds.y1, flippedBounds.y2 );
 #endif
-                mEfx->draw();
 #endif
+                mEfx->draw();
             }
         }
     }
     
     View& CaptureView::removeFromSuperview() {
         console() << "removeFromSuperview\n";
+        if(mCapture) {
+            mCapture->stop();
+        }
         return View::removeFromSuperview();
     }
     
@@ -99,7 +107,7 @@ namespace see {
         }
     }
 }
-//    void CaptureView::initSobelProg() {
+//    void CaptureView::initEffect() {
 //        mSobelProg = gl::GlslProg::create(gl::GlslProg::Format()
 //        .vertex(loadAsset("filter/basic.vert"))
 //        .fragment(loadAsset("filter/dilation.frag")));

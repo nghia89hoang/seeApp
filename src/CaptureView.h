@@ -23,15 +23,15 @@ namespace see {
     public:
         static CaptureViewRef create(int width, int heihgt);
         virtual ~CaptureView();
-        virtual void setup(int width, int height);
+        virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
         virtual View& removeFromSuperview() override;
-        
         void initCapture(int width, int height, bool frontDevice = true);
+        void keyDown(cinder::app::KeyEvent event) {}
     protected:
         CaptureView();        
-        void initSobelProg();
+        void initEffect();
     private:
         int mWidth, mHeight;        
         TestEfxRef mEfx;

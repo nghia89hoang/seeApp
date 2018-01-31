@@ -23,10 +23,11 @@ namespace see {
     public:
         static TestViewRef create();
         virtual ~TestView();
-        virtual void init();
+//        virtual void init();
         virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
+        void keyDown(cinder::app::KeyEvent event) {}
     protected:
         TestView();
     private:

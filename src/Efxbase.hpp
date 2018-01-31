@@ -73,9 +73,11 @@ namespace see {
         RdPass* setFbo(gl::FboRef fbo);
         void chainNext(RdPassRef nextPass, int textureUnit = 0, GLenum attachment = GL_COLOR_ATTACHMENT0);
         void buildRenderQueue(list<RdPass*> &renderQueue);
+        void setRenderBound(Rectf rect);
     protected:
         //!!!!: TODO: Handle VBO, Batching
         gl::BatchRef mBatch;
+        Rectf mRenderBound;
         RdPass();
         list<RdPass*> mPrevRdPass;
         gl::GlslProgRef mProg;
