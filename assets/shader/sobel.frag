@@ -40,7 +40,7 @@ void main(void) {
     float r = 0.0 + sqrt(H.r*H.r + V.r*V.r);
     float g = 0.0 + sqrt(H.g*H.g + V.g*V.g);
     float b = 0.0 + sqrt(H.b*H.b + V.b*V.b);
-    gl_FragColor = vec4(r,g,b,1.0);// * 0.6 + e04 * 1.6;
+    gl_FragColor = vec4(r,g,b,1.0) * 0.6 + e04 * 1.6;
 //    vec4 h1 = sample(-dx,-dy) + 2.0*sample(0.0, -dy) + sample( dx,-dy);
 //    vec4 h2 = (sample(-dx, dy) + 2.0*sample(0.0,  dy) + sample( dx, dy));
 //    gl_FragColor = e06 + (2.0*e07) + e08;
