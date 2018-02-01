@@ -31,9 +31,10 @@ namespace see {
             ref->setup();            
             return ref;
         }
-        void updateInputTexture(gl::TextureRef inputTexture);
+        void setInputTexture(gl::TextureRef inputTexture);
         void setFinalPass(RdPassRef finalPass);
         void setFbo(gl::FboRef fbo);
+        virtual void start();
         virtual void setup();
         virtual void update();
         virtual void draw();

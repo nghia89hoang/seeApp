@@ -43,6 +43,10 @@
 		6E883D9CC9FB4581B6ED9D51 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF9A604EE81E4FA2B1A1B836 /* b2DynamicTree.cpp */; };
 		703278CAFD424D73BC99E364 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A61335F5C404D02BC4537D0 /* b2BroadPhase.cpp */; };
 		7336A71A2004BE2B00356F95 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7336A7182004BE2B00356F95 /* Particle.cpp */; };
+		7344841820229E6A00D03C0C /* StillImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7344841420229E6A00D03C0C /* StillImageView.cpp */; };
+		7344841920229E6A00D03C0C /* ExpView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7344841620229E6A00D03C0C /* ExpView.cpp */; };
+		7344841D20229E8100D03C0C /* ParticleController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7344841B20229E8100D03C0C /* ParticleController.cpp */; };
+		734484202022AF1F00D03C0C /* BaseView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7344841E2022AF1F00D03C0C /* BaseView.cpp */; };
 		73474B91200323BC008228DB /* FilterMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B8F200323BC008228DB /* FilterMgr.cpp */; };
 		73474B942003248F008228DB /* Efxbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B922003248F008228DB /* Efxbase.cpp */; };
 		73474B98200372A1008228DB /* TestEfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73474B96200372A1008228DB /* TestEfx.cpp */; };
@@ -69,7 +73,7 @@
 		7392501C2001C17B0046B23B /* CaptureView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 739250162001C17A0046B23B /* CaptureView.cpp */; };
 		7392501D2001C17B0046B23B /* TestView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 739250172001C17A0046B23B /* TestView.cpp */; };
 		7392501E2001C17B0046B23B /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 739250182001C17A0046B23B /* ViewController.cpp */; };
-		7392501F2001C1AD0046B23B /* ViewController.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 7392501A2001C17B0046B23B /* ViewController.hpp */; };
+		7392501F2001C1AD0046B23B /* ViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 7392501A2001C17B0046B23B /* ViewController.h */; };
 		76C53A218BA4473AA4F00E58 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0EEE5691034459938FE977 /* CoreMotion.framework */; };
 		779B4B454EBE48B5B6E4BD60 /* b2EdgeAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE19DF8DD7B9480CB4ED8C3C /* b2EdgeAndCircleContact.cpp */; };
 		8046478847C249569CDCBA42 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13C5B50371CB4D41B8D9B34F /* b2GearJoint.cpp */; };
@@ -161,7 +165,15 @@
 		70F4CF64DD324AD8BC5FDAE1 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = b2CollideCircle.cpp; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/b2CollideCircle.cpp; sourceTree = "<group>"; };
 		727937523A724D77B2355950 /* b2CircleShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2CircleShape.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Collision/Shapes/b2CircleShape.h; sourceTree = "<group>"; };
 		7336A7182004BE2B00356F95 /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
-		7336A7192004BE2B00356F95 /* Particle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Particle.hpp; path = ../src/Particle.hpp; sourceTree = "<group>"; };
+		7344841420229E6A00D03C0C /* StillImageView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StillImageView.cpp; path = ../src/StillImageView.cpp; sourceTree = "<group>"; };
+		7344841520229E6A00D03C0C /* StillImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StillImageView.h; path = ../src/StillImageView.h; sourceTree = "<group>"; };
+		7344841620229E6A00D03C0C /* ExpView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExpView.cpp; path = ../src/ExpView.cpp; sourceTree = "<group>"; };
+		7344841720229E6A00D03C0C /* ExpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpView.h; path = ../src/ExpView.h; sourceTree = "<group>"; };
+		7344841A20229E8100D03C0C /* ParticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleController.h; path = ../src/ParticleController.h; sourceTree = "<group>"; };
+		7344841B20229E8100D03C0C /* ParticleController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleController.cpp; path = ../src/ParticleController.cpp; sourceTree = "<group>"; };
+		7344841C20229E8100D03C0C /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../src/Particle.h; sourceTree = "<group>"; };
+		7344841E2022AF1F00D03C0C /* BaseView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BaseView.cpp; path = ../src/BaseView.cpp; sourceTree = "<group>"; };
+		7344841F2022AF1F00D03C0C /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = ../src/BaseView.h; sourceTree = "<group>"; };
 		73474B8F200323BC008228DB /* FilterMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FilterMgr.cpp; path = ../src/FilterMgr.cpp; sourceTree = "<group>"; };
 		73474B90200323BC008228DB /* FilterMgr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FilterMgr.hpp; path = ../src/FilterMgr.hpp; sourceTree = "<group>"; };
 		73474B922003248F008228DB /* Efxbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Efxbase.cpp; path = ../src/Efxbase.cpp; sourceTree = "<group>"; };
@@ -211,7 +223,7 @@
 		739250172001C17A0046B23B /* TestView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestView.cpp; path = ../src/TestView.cpp; sourceTree = "<group>"; };
 		739250182001C17A0046B23B /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewController.cpp; path = ../src/ViewController.cpp; sourceTree = "<group>"; };
 		739250192001C17A0046B23B /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestView.h; path = ../src/TestView.h; sourceTree = "<group>"; };
-		7392501A2001C17B0046B23B /* ViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ViewController.hpp; path = ../src/ViewController.hpp; sourceTree = "<group>"; };
+		7392501A2001C17B0046B23B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../src/ViewController.h; sourceTree = "<group>"; };
 		7392501B2001C17B0046B23B /* CaptureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptureView.h; path = ../src/CaptureView.h; sourceTree = "<group>"; };
 		7405F07AA1D246969CD51D0F /* b2StackAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = b2StackAllocator.h; path = ../../../cinder_master/blocks/Box2D/src/Box2D/Common/b2StackAllocator.h; sourceTree = "<group>"; };
 		7AC55F37AD4540DAA27C6BB7 /* Osc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = Osc.cpp; path = ../../../cinder_master/blocks/OSC/src/cinder/osc/Osc.cpp; sourceTree = "<group>"; };
@@ -365,7 +377,7 @@
 				735723CC20045BAA00ACFB5A /* platform */,
 				73474B9520036FFD008228DB /* Filter */,
 				739250182001C17A0046B23B /* ViewController.cpp */,
-				7392501A2001C17B0046B23B /* ViewController.hpp */,
+				7392501A2001C17B0046B23B /* ViewController.h */,
 				42CD1F4E7D7E460291A56F73 /* seeApp.mm */,
 			);
 			name = Source;
@@ -512,8 +524,10 @@
 		7336A7172004BD0C00356F95 /* gl */ = {
 			isa = PBXGroup;
 			children = (
+				7344841B20229E8100D03C0C /* ParticleController.cpp */,
+				7344841A20229E8100D03C0C /* ParticleController.h */,
+				7344841C20229E8100D03C0C /* Particle.h */,
 				7336A7182004BE2B00356F95 /* Particle.cpp */,
-				7336A7192004BE2B00356F95 /* Particle.hpp */,
 			);
 			name = gl;
 			sourceTree = "<group>";
@@ -544,10 +558,16 @@
 		735723DF200495C400ACFB5A /* cview */ = {
 			isa = PBXGroup;
 			children = (
+				7344841620229E6A00D03C0C /* ExpView.cpp */,
+				7344841720229E6A00D03C0C /* ExpView.h */,
+				7344841420229E6A00D03C0C /* StillImageView.cpp */,
+				7344841520229E6A00D03C0C /* StillImageView.h */,
 				739250162001C17A0046B23B /* CaptureView.cpp */,
 				7392501B2001C17B0046B23B /* CaptureView.h */,
 				739250172001C17A0046B23B /* TestView.cpp */,
 				739250192001C17A0046B23B /* TestView.h */,
+				7344841E2022AF1F00D03C0C /* BaseView.cpp */,
+				7344841F2022AF1F00D03C0C /* BaseView.h */,
 			);
 			name = cview;
 			sourceTree = "<group>";
@@ -811,8 +831,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7392501F2001C1AD0046B23B /* ViewController.hpp in Sources */,
+				7392501F2001C1AD0046B23B /* ViewController.h in Sources */,
 				7336A71A2004BE2B00356F95 /* Particle.cpp in Sources */,
+				7344841920229E6A00D03C0C /* ExpView.cpp in Sources */,
 				739250142001BEB90046B23B /* _ViewController.cpp in Sources */,
 				739250152001BEB90046B23B /* _TextView.cpp in Sources */,
 				739250082001BEB00046B23B /* _DraggableView.cpp in Sources */,
@@ -840,6 +861,8 @@
 				377EEE58741B48D696A08BB8 /* b2Distance.cpp in Sources */,
 				6E883D9CC9FB4581B6ED9D51 /* b2DynamicTree.cpp in Sources */,
 				C0D8D4126AAD4C839AFADF5C /* b2TimeOfImpact.cpp in Sources */,
+				7344841D20229E8100D03C0C /* ParticleController.cpp in Sources */,
+				734484202022AF1F00D03C0C /* BaseView.cpp in Sources */,
 				1F8D5A30B5D444FAA71D221B /* b2ChainShape.cpp in Sources */,
 				0B400F2414524DE68F8C716A /* b2CircleShape.cpp in Sources */,
 				090F5415D3B54BB6B9F925AF /* b2EdgeShape.cpp in Sources */,
@@ -865,6 +888,7 @@
 				06D3FFC12BFE46DF954A2DA3 /* b2EdgeAndPolygonContact.cpp in Sources */,
 				73474B98200372A1008228DB /* TestEfx.cpp in Sources */,
 				ECA0BFDCFD584769A5333ED2 /* b2PolygonAndCircleContact.cpp in Sources */,
+				7344841820229E6A00D03C0C /* StillImageView.cpp in Sources */,
 				7392501C2001C17B0046B23B /* CaptureView.cpp in Sources */,
 				036A5233AFDC4691B596B541 /* b2PolygonContact.cpp in Sources */,
 				E0679C7C720D4A7C86CCDC2E /* b2DistanceJoint.cpp in Sources */,

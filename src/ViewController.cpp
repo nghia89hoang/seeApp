@@ -5,7 +5,7 @@
 //  Created by Hoang Ngoc Nghia on 1/5/18.
 //
 
-#include "ViewController.hpp"
+#include "ViewController.h"
 #include "cinder/app/App.h"
 #include "poScene/TextView.h"
 #include "StillImageView.h"
@@ -28,19 +28,17 @@ namespace see {
         sScreenSize = ivec2(float(size.x) * scale, float(size.y) * scale);
         //
         StillImageViewRef stillImageView = StillImageView::create();
+        stillImageView->initialize();
         mListView.push_back(stillImageView);
         //
         ExpViewRef expView = ExpView::create();
-        mListView.push_back(expView);        
-        //
-#if !defined(CINDER_COCOA_TOUCH)
-        CaptureViewRef capView = CaptureView::create(1280, 720);
-        mListView.push_back(capView);
-#endif
+        mListView.push_back(expView);
         //
         TestViewRef testView = TestView::create();
         mListView.push_back(testView);
-        
+        //
+        CaptureViewRef capView = CaptureView::create(1280, 720);
+        mListView.push_back(capView);
         
     }
 
@@ -50,8 +48,12 @@ namespace see {
         mRoot->addSubview(mListView[mCurView]);
     }
     
-    void ViewController::changeView(bool isNext) {
-        po::scene::ViewRef v = mListView[mCurView];
+    void ViewController::changeView(bool isNext, bool retain) {
+        BaseViewRef v = mListView[mCurView];
+        v->setActive(false);
+        if(!retain) {
+            v->deInitialize();
+        }
         v->removeFromSuperview();
         if(isNext) {
             if(++mCurView >= mListView.size()) {
@@ -62,7 +64,8 @@ namespace see {
                 mCurView = mListView.size() - 1;
             }
         }
-        mListView[mCurView]->setup();
+        mListView[mCurView]->setActive(true);
+        mListView[mCurView]->initialize();
         mRoot->addSubview(mListView[mCurView]);
     }
     void ViewController::keyDown(cinder::app::KeyEvent event) {

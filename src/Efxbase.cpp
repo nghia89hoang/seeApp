@@ -18,6 +18,11 @@ namespace see {
     
     void Efxbase::setup() {
     }
+    
+    void Efxbase::start() {
+        
+    }
+    
     void Efxbase::draw() {
         for(RdPass* pass : mRenderQueue) {
             if(pass == nullptr) {
@@ -44,7 +49,7 @@ namespace see {
     void Efxbase::setFbo(gl::FboRef fbo) {
         mFbo = fbo;
     }
-    void Efxbase::updateInputTexture(gl::TextureRef inputTexture) {
+    void Efxbase::setInputTexture(gl::TextureRef inputTexture) {
         mInputTexture = inputTexture;
     }
 //    void Efxbase::blitScreen() {

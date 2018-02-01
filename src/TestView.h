@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include "cinder/gl/gl.h"
-#include "poScene/View.h"
+#include "BaseView.h"
 
 using namespace cinder;
 using namespace po::scene;
@@ -19,14 +19,15 @@ namespace see {
     class TestView;
     typedef std::shared_ptr<class TestView>    TestViewRef;
 
-    class TestView : public po::scene::View {
+    class TestView : public BaseView {
     public:
         static TestViewRef create();
         virtual ~TestView();
-//        virtual void init();
+        virtual void onViewInit() override;
         virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
+        virtual void onViewDeInit() override;
         void keyDown(cinder::app::KeyEvent event) {}
     protected:
         TestView();

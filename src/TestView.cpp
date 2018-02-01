@@ -21,11 +21,12 @@ namespace see {
     }
     TestViewRef TestView::create() {
         TestViewRef ref = TestViewRef(new TestView());
-//        ref->setup();
+        ref->setup();
         return ref;
     }
-    
     void TestView::setup() {
+    }
+    void TestView::onViewInit() {        
         if(mShader == nullptr) {
             mCam.lookAt(vec3(5,2,5), vec3(0,1,0));
             gl::setMatrices(mCam);
@@ -34,10 +35,13 @@ namespace see {
             mBalls = gl::Batch::create(geom::Sphere(), mShader);
         }
     }
+    void TestView::onViewDeInit() {        
+    }
     void TestView::update() {
-        
+        if(!mIsInit) return;
     }
     void TestView::draw() {
+        if(!mIsInit) return;
         gl::setMatrices(mCam);
         
         gl::enableDepthRead();

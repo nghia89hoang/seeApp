@@ -20,27 +20,32 @@ namespace see {
         
     }
     void TestEfx::setup() {
-//        gl::Fbo::Format format;
-//        gl::FboRef fbo = gl::Fbo::create(mFbo->getWidth(), mFbo->getHeight(), format.depthTexture());
+        gl::Fbo::Format format;
+        gl::FboRef fbo = gl::Fbo::create(mFbo->getWidth(), mFbo->getHeight(), format.depthTexture());
         
         grayPass = RdPass::create();
         grayPass->createGlslProg("shader/basic.vert", "shader/copy.frag");
         grayPass->setRenderBound(mFbo->getBounds());
-//        grayPass->setFbo(mFbo);
+        grayPass->setFbo(mFbo);
         
         sobelPass = RdPass::create();
-        sobelPass->createGlslProg("shader/basic.vert", "shader/dream.frag");
+        sobelPass->createGlslProg("shader/basic.vert", "shader/sobel.frag");
         sobelPass->setRenderBound(mFbo->getBounds());
         sobelPass->setFbo(nullptr);
         
-//        grayPass->chainNext(sobelPass);
-//        setFinalPass(sobelPass);
-        setFinalPass(grayPass);
+        grayPass->chainNext(sobelPass);
+        setFinalPass(sobelPass);
+//        setFinalPass(grayPass);
+    }
+    void TestEfx::start() {
+        grayPass->setInputTexture(mInputTexture, 0);
     }
     void TestEfx::update() {
-        grayPass->setInputTexture(mInputTexture, 0);
-        
+
     }
+//    void TestEfx::draw() {
+//        Efxbase::draw();
+//    }
     TestEfx::~TestEfx(){
         
     }        

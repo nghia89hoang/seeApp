@@ -7,7 +7,7 @@
 
 #ifndef CaptureView_hpp
 #define CaptureView_hpp
-#include "poScene/View.h"
+#include "BaseView.h"
 #include "TestEfx.hpp"
 #include <stdio.h>
 
@@ -19,13 +19,15 @@ namespace see {
     class CaptureView;
     typedef std::shared_ptr<CaptureView> CaptureViewRef;
     
-    class CaptureView : public po::scene::View {
+    class CaptureView : public BaseView {
     public:
         static CaptureViewRef create(int width, int heihgt);
         virtual ~CaptureView();
+        virtual void onViewInit() override;
         virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
+        virtual void onViewDeInit() override;
         virtual View& removeFromSuperview() override;
         void initCapture(int width, int height, bool frontDevice = true);
         void keyDown(cinder::app::KeyEvent event) {}

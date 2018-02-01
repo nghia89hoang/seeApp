@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include "cinder/gl/gl.h"
-#include "poScene/View.h"
+#include "BaseView.h"
 #include "ParticleController.h"
 
 using namespace cinder;
@@ -19,15 +19,17 @@ namespace see {
     class ExpView;
     typedef std::shared_ptr<class ExpView>    ExpViewRef;
     
-    class ExpView : public po::scene::View {
+    class ExpView : public BaseView {
     public:
         static ExpViewRef create();
         virtual ~ExpView();
+        virtual void onViewInit() override;
         virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
+        virtual void onViewDeInit() override;
         void onMouseEvent(po::scene::MouseEvent &event);
-        
+        void onTouchEvent(po::scene::TouchEvent &event);
     protected:
         ExpView();
         void addParticleGrid(int cellSize);

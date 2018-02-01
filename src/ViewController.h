@@ -12,7 +12,7 @@
 //#include <list>
 #include <vector>
 #include "poScene/ViewController.h"
-#include "poScene/View.h"
+#include "BaseView.h"
 using namespace std;
 using namespace cinder;
 
@@ -27,12 +27,12 @@ namespace see {
     public:        
         static ViewControllerRef create();
         void viewDidLoad() override;
-        void changeView(bool isNext = true);
+        void changeView(bool isNext = true, bool retain = true);
         void keyDown(cinder::app::KeyEvent event);
     protected:
         ViewController();
     private:
-        vector<po::scene::ViewRef> mListView;
+        vector<BaseViewRef> mListView;
         int mCurView;
         po::scene::ViewRef mRoot;
     };

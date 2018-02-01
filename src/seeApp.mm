@@ -2,7 +2,7 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Log.h"
-#include "ViewController.hpp"
+#include "ViewController.h"
 #include "poScene/Scene.h"
 #if defined(CINDER_COCOA_TOUCH)
     #include "MainViewController.h"

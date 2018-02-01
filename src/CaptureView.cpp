@@ -29,6 +29,9 @@ namespace see {
         return ref;
     }
     void CaptureView::setup() {
+        
+    }
+    void CaptureView::onViewInit() {
         if(mCapture) {
             mCaptureTex.reset();
             mCapture->start();
@@ -47,13 +50,17 @@ namespace see {
         mEfx = TestEfx::create(mFbo);
         mEfx->setTexSize(vec2(mWidth, mHeight));
     }
-
+    void CaptureView::onViewDeInit() {
+        
+    }
     void CaptureView::update() {
+        if(!mIsInit) return;
         if(mCapture && mCapture->checkNewFrame()) {
             Surface8uRef surf = mCapture->getSurface();
             if(!mCaptureTex) {
                 mCaptureTex = gl::Texture::create( *surf, gl::Texture::Format().loadTopDown());
-                mEfx->updateInputTexture(mCaptureTex);
+                mEfx->setInputTexture(mCaptureTex);
+                mEfx->start();
             } else {
                 mCaptureTex->update(*surf);
             }
@@ -62,6 +69,7 @@ namespace see {
     }
     
     void CaptureView::draw() {
+        if(!mIsInit) return;
         gl::clear( Color( 0.0f, 0.0f, 0.0f ) );
         if(mCaptureTex) {
             {
@@ -105,6 +113,7 @@ namespace see {
     #endif
         }
     }
+    
 }
 //    void CaptureView::initEffect() {
 //        mSobelProg = gl::GlslProg::create(gl::GlslProg::Format()

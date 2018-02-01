@@ -21,9 +21,11 @@ namespace see {
     public:
         static TestEfxRef create(gl::FboRef fbo = nullptr);
         ~TestEfx();
+        virtual void start();
         virtual void setup();
         virtual void update();
-        void setTexSize(const vec2 &textSize);        
+//        virtual void draw();
+        void setTexSize(const vec2 &textSize);
     protected:
         TestEfx();
         vec2 uTexSize;

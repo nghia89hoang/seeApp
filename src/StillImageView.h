@@ -9,7 +9,7 @@
 #define StillImageView_hpp
 #include <stdio.h>
 #include "cinder/gl/gl.h"
-#include "poScene/View.h"
+#include "BaseView.h"
 #include "ParticleController.h"
 #include "Efxbase.hpp"
 
@@ -20,13 +20,15 @@ namespace see {
     class StillImageView;
     typedef std::shared_ptr<class StillImageView>    StillImageViewRef;
     
-    class StillImageView : public po::scene::View {
+    class StillImageView : public BaseView {
     public:
         static StillImageViewRef create();
         virtual ~StillImageView();
+        virtual void onViewInit() override;
         virtual void setup() override;
         virtual void update() override;
         virtual void draw() override;
+        virtual void onViewDeInit() override;
         void onMouseEvent(po::scene::MouseEvent &event);
     protected:
         StillImageView();
