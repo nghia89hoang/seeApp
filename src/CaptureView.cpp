@@ -25,7 +25,7 @@ namespace see {
         CaptureViewRef ref = CaptureViewRef(new CaptureView());
         ref->mWidth = width;
         ref->mHeight = height;
-//        ref->setup();
+        ref->setup();
         return ref;
     }
     void CaptureView::setup() {
@@ -46,7 +46,6 @@ namespace see {
         
         mEfx = TestEfx::create(mFbo);
         mEfx->setTexSize(vec2(mWidth, mHeight));
-        
     }
 
     void CaptureView::update() {

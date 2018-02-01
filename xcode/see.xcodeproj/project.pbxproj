@@ -50,6 +50,10 @@
 		7327D5B420098FB700634012 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5AF20098FB700634012 /* Particle.cpp */; };
 		7327D5B720098FC500634012 /* TestEfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7327D5B520098FC500634012 /* TestEfx.cpp */; };
 		7344840B2021924500D03C0C /* StillImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 734484092021924500D03C0C /* StillImageView.cpp */; };
+		7344840D2021A15D00D03C0C /* metaimage.vert in Resources */ = {isa = PBXBuildFile; fileRef = 7344840C2021A15D00D03C0C /* metaimage.vert */; };
+		7344840F2021A1AD00D03C0C /* metaimage.frag in Resources */ = {isa = PBXBuildFile; fileRef = 7344840E2021A1AD00D03C0C /* metaimage.frag */; };
+		734484122021AD3900D03C0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734484102021AD3800D03C0C /* QuartzCore.framework */; };
+		734484132021AD3900D03C0C /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734484112021AD3800D03C0C /* Quartz.framework */; };
 		737826AB1FFE15C700249F04 /* TestView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737826A91FFE15C700249F04 /* TestView.cpp */; };
 		73924D0C2001A6020046B23B /* posterize.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0B2001A6020046B23B /* posterize.frag */; };
 		73924D0E2001A6F60046B23B /* line.frag in Resources */ = {isa = PBXBuildFile; fileRef = 73924D0D2001A6F60046B23B /* line.frag */; };
@@ -187,6 +191,10 @@
 		7327D5B620098FC500634012 /* TestEfx.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestEfx.hpp; path = ../src/Filter/TestEfx.hpp; sourceTree = "<group>"; };
 		734484092021924500D03C0C /* StillImageView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StillImageView.cpp; path = ../src/StillImageView.cpp; sourceTree = "<group>"; };
 		7344840A2021924500D03C0C /* StillImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StillImageView.h; path = ../src/StillImageView.h; sourceTree = "<group>"; };
+		7344840C2021A15D00D03C0C /* metaimage.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = metaimage.vert; sourceTree = "<group>"; };
+		7344840E2021A1AD00D03C0C /* metaimage.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = metaimage.frag; sourceTree = "<group>"; };
+		734484102021AD3800D03C0C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		734484112021AD3800D03C0C /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		737826A91FFE15C700249F04 /* TestView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestView.cpp; path = ../src/TestView.cpp; sourceTree = "<group>"; };
 		737826AA1FFE15C700249F04 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestView.h; path = ../src/TestView.h; sourceTree = "<group>"; };
 		73924D0B2001A6020046B23B /* posterize.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = posterize.frag; sourceTree = "<group>"; };
@@ -306,6 +314,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734484122021AD3900D03C0C /* QuartzCore.framework in Frameworks */,
+				734484132021AD3900D03C0C /* Quartz.framework in Frameworks */,
 				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
 				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
@@ -440,6 +450,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				734484112021AD3800D03C0C /* Quartz.framework */,
+				734484102021AD3800D03C0C /* QuartzCore.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 				C3706E7420D545C79BDC6816 /* OpenCL.framework */,
@@ -586,13 +598,15 @@
 				73E23D6C2000F8D700389721 /* hexpix.frag */,
 				73924D0B2001A6020046B23B /* posterize.frag */,
 				73924D0D2001A6F60046B23B /* line.frag */,
-				73E23D5A1FFF58E300389721 /* basic.vert */,
 				73E23D5C1FFF58FB00389721 /* gray.frag */,
 				73235F4020027F0A008E22B3 /* worhol.frag */,
 				73235F4420028392008E22B3 /* thermal.frag */,
 				73235F46200283FA008E22B3 /* vignette.frag */,
 				73235F4A200284B3008E22B3 /* cell.frag */,
 				73235F4C20028600008E22B3 /* scanline.frag */,
+				73E23D5A1FFF58E300389721 /* basic.vert */,
+				7344840C2021A15D00D03C0C /* metaimage.vert */,
+				7344840E2021A1AD00D03C0C /* metaimage.frag */,
 			);
 			path = shader;
 			sourceTree = "<group>";
@@ -829,6 +843,7 @@
 				73235F432002801D008E22B3 /* copy.frag in Resources */,
 				73235F4520028392008E22B3 /* thermal.frag in Resources */,
 				73924D0E2001A6F60046B23B /* line.frag in Resources */,
+				7344840D2021A15D00D03C0C /* metaimage.vert in Resources */,
 				73E23D581FFF58B200389721 /* haarcascade_eye.xml in Resources */,
 				73E23D591FFF58B200389721 /* haarcascade_frontalface_alt.xml in Resources */,
 				73E23D631FFFD9CD00389721 /* dilation.frag in Resources */,
@@ -837,6 +852,7 @@
 				73E23D5F1FFF6A9A00389721 /* sobel.frag in Resources */,
 				73924D0C2001A6020046B23B /* posterize.frag in Resources */,
 				73E23D692000EDCA00389721 /* dream.frag in Resources */,
+				7344840F2021A1AD00D03C0C /* metaimage.frag in Resources */,
 				73E23D672000EC1E00389721 /* lowBlur.frag in Resources */,
 				73235F47200283FA008E22B3 /* vignette.frag in Resources */,
 			);

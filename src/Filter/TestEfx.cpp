@@ -25,15 +25,17 @@ namespace see {
         
         grayPass = RdPass::create();
         grayPass->createGlslProg("shader/basic.vert", "shader/copy.frag");
-        grayPass->setFbo(mFbo);
+        grayPass->setRenderBound(mFbo->getBounds());
+//        grayPass->setFbo(mFbo);
         
         sobelPass = RdPass::create();
         sobelPass->createGlslProg("shader/basic.vert", "shader/dream.frag");
         sobelPass->setRenderBound(mFbo->getBounds());
         sobelPass->setFbo(nullptr);
         
-        grayPass->chainNext(sobelPass);
-        setFinalPass(sobelPass);
+//        grayPass->chainNext(sobelPass);
+//        setFinalPass(sobelPass);
+        setFinalPass(grayPass);
     }
     void TestEfx::update() {
         grayPass->setInputTexture(mInputTexture, 0);

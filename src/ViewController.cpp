@@ -33,8 +33,10 @@ namespace see {
         ExpViewRef expView = ExpView::create();
         mListView.push_back(expView);        
         //
+#if !defined(CINDER_COCOA_TOUCH)
         CaptureViewRef capView = CaptureView::create(1280, 720);
         mListView.push_back(capView);
+#endif
         //
         TestViewRef testView = TestView::create();
         mListView.push_back(testView);

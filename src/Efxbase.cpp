@@ -70,7 +70,7 @@ namespace see {
         return ref;
     }
     void RdPass::setup() {
-        createGlslProg("shader/basic.vert", "shader/copy.frag");
+//        createGlslProg("shader/basic.vert", "shader/copy.frag");
     }
     void RdPass::update() {
         
@@ -148,18 +148,8 @@ namespace see {
 #else
                 gl::scale(mRenderBound.getWidth() / toPixels(getWindowWidth()), mRenderBound.getHeight() / toPixels(getWindowHeight()));
 #endif
-//                gl::drawSolidRect(flippedBounds);
-//                gl::ScopedViewport vp(ivec2(0), mFboTarget->getSize());
-//                gl::ScopedViewport vp(ivec2(0), toPixels(getWindowSize()));
-//                gl::setMatricesWindow( toPixels( vec2(getWindowHeight(), getWindowWidth()) ) , false );
                 gl::ScopedViewport vp(vec2(0,0), toPixels(getWindowSize()));
-//                gl::setMatricesWindow(toPixels(getWindowSize()));
                 gl::drawSolidRect(toPixels(getWindowBounds()), vec2(1,0), vec2(0,1));
-//                gl::drawSolidRect(mRenderBound, vec2(1,0), vec2(0,1));
-//                gl::drawSolidRect(mFboTarget->getBounds());
-//                gl::drawSolidRect(toPixels(flippedBounds));
-//                gl::drawSolidRect(mInputTexture[0]->getBounds());
-//                gl::draw(mInputTexture[0]);
             }
         }
         for(map<int, gl::TextureRef>::iterator it = mInputTexture.begin();

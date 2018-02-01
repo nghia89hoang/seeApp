@@ -11,6 +11,7 @@
 #include "cinder/gl/gl.h"
 #include "poScene/View.h"
 #include "ParticleController.h"
+#include "Efxbase.hpp"
 
 using namespace cinder;
 using namespace po::scene;
@@ -31,6 +32,8 @@ namespace see {
         StillImageView();
     private:
         gl::TextureRef mImage;
+        gl::FboRef mFbo;        
+        RdPassRef mPass;
     };
 }
 #endif /* StillImageView_hpp */

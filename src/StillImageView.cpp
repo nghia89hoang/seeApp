@@ -31,13 +31,20 @@ namespace see {
     void StillImageView::setup() {
         ImageSourceRef imgSource = loadImage(loadAsset("img/cat_head.jpg"));
         mImage = gl::Texture::create(imgSource);
+        mFbo = gl::Fbo::create(getWindowWidth(), getWindowHeight());
+        mPass = RdPass::create();
+        mPass->createGlslProg("shader/metaimage.vert", "shader/metaimage.frag");
+        mPass->setInputTexture(mImage, 0);
+        mPass->setFbo(nullptr);
+        mPass->setRenderBound(getWindowBounds());
     }
     void StillImageView::update() {
-        
+        mPass->update();
     }
     void StillImageView::draw() {
-        gl::clearColor(ColorA(0, 0, 0, 0));
+        gl::clearColor(ColorA(0.5, 0.5, 0.5, 0.5));
         gl::clear();
-        gl::draw(mImage, getWindowBounds());
+//        gl::draw(mImage, getWindowBounds());
+        mPass->draw();
     }
 }
